@@ -5,7 +5,7 @@ namespace Network
 {
     public class MessageDispatch<T> : Singleton<MessageDispatch<T>>
     {
-        public void Dispatch(T sender, SkillBridge.Message.NetMessageResponse message)
+        public void Dispatch(T sender, SkillBridge.Message.NetMessageResponse message)//分发相应，客户端
         {
             if (message.userRegister != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.userRegister); }
             if (message.userLogin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.userLogin); }
@@ -17,7 +17,7 @@ namespace Network
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }   
         }
 
-        public void Dispatch(T sender, SkillBridge.Message.NetMessageRequest message)
+        public void Dispatch(T sender, SkillBridge.Message.NetMessageRequest message)//分发请求。服务器
         {
             if (message.userRegister != null) { MessageDistributer<T>.Instance.RaiseEvent(sender,message.userRegister); }
             if (message.userLogin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.userLogin); }
@@ -27,7 +27,9 @@ namespace Network
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }
             if (message.mapTeleport != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapTeleport); }
-            
+
+            if (message.firstRequest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.firstRequest); }//测试用
+
         }
     }
 }
