@@ -9,8 +9,9 @@ using System.Configuration;
 
 using System.Threading;
 
-using Network;
-using GameServer.Services;
+using Network;//必要引用
+using GameServer.Services;//必要引用
+using GameServer.Managers;
 
 namespace GameServer
 {
@@ -21,20 +22,20 @@ namespace GameServer
         NetService network;
         public bool Init()
         {
+            int Port = Properties.Settings.Default.ServerPort;
             network = new NetService();
-            network.Init(8000);//初始化端口号
-            HelloWorldService.Instance.Init();//单例调用
-
+            network.Init(Port);//初始化端口号
             DBService.Instance.Init();
-            //var a = DBService.Instance.Entities.Characters.Where(s => s.TID == 1);
-            //Console.WriteLine("{0}", a.FirstOrDefault<TCharacter>().Name);
+            UserService.Instance.Init();//启动
+            DataManager.Instance.Load();
+            MapManager.Instance.Init();
             thread = new Thread(new ThreadStart(this.Update));
             return true;
         }
 
         public void Start()
         {
-            HelloWorldService.Instance.Start();
+            //HelloWorldService.Instance.Start();//单例调用开始方法
             network.Start();
             running = true;
             thread.Start();
