@@ -1,99 +1,892 @@
-2022-06-08 00:12:35,624 [ 1] INFO  Unity: LoadingManager start
-2022-06-08 00:12:39,797 [ 1] INFO  Unity: DataManager > DataManager()
-2022-06-08 00:12:39,892 [ 1] INFO  Unity: Client UserService Init
-2022-06-08 00:12:39,894 [ 1] INFO  Unity: Client UserService Init
-2022-06-08 00:12:52,282 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
-2022-06-08 00:12:52,284 [ 1] INFO  Unity: ConnectToServer() Start
-2022-06-08 00:12:52,285 [ 1] INFO  Unity: DoConnect
-2022-06-08 00:12:52,287 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-06-08 00:12:52,290 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-06-08 02:55:07,197 [ 1] INFO  Unity: LoadingManager start
+2022-06-08 02:55:11,473 [ 1] INFO  Unity: DataManager > DataManager()
+2022-06-08 02:55:11,670 [ 1] INFO  Unity: Client UserService Init
+2022-06-08 02:55:11,674 [ 1] INFO  Unity: Client UserService Init
+2022-06-08 02:55:28,069 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
+2022-06-08 02:55:28,071 [ 1] INFO  Unity: ConnectToServer() Start
+2022-06-08 02:55:28,073 [ 1] INFO  Unity: DoConnect
+2022-06-08 02:55:28,075 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-06-08 02:55:28,078 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-06-08 00:12:55,095 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-06-08 00:12:55,106 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-06-08 00:12:55,248 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-06-08 00:12:55,258 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-06-08 00:12:56,754 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2022-06-08 00:12:56,776 [ 1] INFO  Unity: OnGameEnter:Success,[None]
-2022-06-08 00:12:56,785 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
-2022-06-08 00:12:56,788 [ 1] INFO  Unity: AddCharacter:8:箭 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-06-08 00:12:56,791 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-06-08 00:12:57,295 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-06-08 00:12:57,296 [ 1] INFO  Unity: UIMInimap Init
-2022-06-08 00:12:57,302 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
-2022-06-08 00:12:58,281 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-06-08 00:12:58,284 [ 1] INFO  Unity: UserGameLeaveRequest
-2022-06-08 00:12:58,352 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:8,CurrentCharacter:8
-2022-06-08 00:12:58,354 [ 1] INFO  Unity: 自己离开：response.characterId：8，User.Instance.CurrentCharacter.Id：8
-2022-06-08 00:12:58,356 [ 1] INFO  Unity: RemoveCharacter:8
-2022-06-08 00:12:58,360 [ 1] INFO  Unity: OnGameLeave:Success [None]
-2022-06-08 00:12:58,361 [ 1] INFO  Unity: Character_8_箭 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2022-06-08 00:12:58,382 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-06-08 00:12:58,388 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-06-08 00:13:24,693 [ 1] INFO  Unity: Select Char:[10]辅导费[Archer]
-2022-06-08 00:13:25,433 [ 1] INFO  Unity: UserGameEnterRequest::characterId :2
-2022-06-08 00:13:25,456 [ 1] INFO  Unity: OnGameEnter:Success,[None]
-2022-06-08 00:13:27,041 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
-2022-06-08 00:13:27,042 [ 1] INFO  Unity: AddCharacter:10:辅导费 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-06-08 00:16:45,037 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at GameObjectManager.InitGameObject (UnityEngine.GameObject go, Entities.Character character) [0x000b9] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:101 
-  at GameObjectManager.CreateCharacterObject (Entities.Character character) [0x00122] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:76 
-  at GameObjectManager.OnCharacterEnter (Entities.Character cha) [0x00003] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:37 
-  at Manager.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) [0x0007b] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\CharacterManager.cs:56 
-  at Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) [0x00088] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Services\MapService.cs:49 
-  at (wrapper delegate-invoke) Network.MessageDistributer`1/MessageHandler`1<object, SkillBridge.Message.MapCharacterEnterResponse>:invoke_void__this___object_MapCharacterEnterResponse (object,SkillBridge.Message.MapCharacterEnterResponse)
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) [0x00044] in C:\Study\unity\myMMO\mmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
-2022-06-08 00:16:45,039 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, GameObjectManager.InitGameObject (UnityEngine.GameObject go, Entities.Character character) (at Assets/Scripts/Managers/GameObjectManager.cs:101)
-GameObjectManager.CreateCharacterObject (Entities.Character character) (at Assets/Scripts/Managers/GameObjectManager.cs:76)
-GameObjectManager.OnCharacterEnter (Entities.Character cha) (at Assets/Scripts/Managers/GameObjectManager.cs:37)
-Manager.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) (at Assets/Scripts/Managers/CharacterManager.cs:56)
-Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) (at Assets/Scripts/Services/MapService.cs:49)
-Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) (at C:/Study/unity/myMMO/mmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+2022-06-08 02:55:32,400 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-06-08 02:55:32,405 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-08 02:55:32,811 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-08 02:55:32,830 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-08 02:55:41,947 [ 1] INFO  Unity: Select Char:[10]辅导费[Archer]
+2022-06-08 02:55:42,419 [ 1] INFO  Unity: UserGameEnterRequest::characterId :2
+2022-06-08 02:55:42,443 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-06-08 02:55:42,446 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:2,CurrentMapId:0
+2022-06-08 02:55:42,450 [ 1] INFO  Unity: AddCharacter:10:辅导费 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-08 02:55:42,455 [ 1] INFO  Unity: AddCharacter:13:牛牛 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-08 02:55:42,457 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-06-08 02:55:43,192 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-08 02:55:43,199 [ 1] INFO  Unity: UIMInimap Init
+2022-06-08 02:55:43,201 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-06-08 02:55:55,224 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0
+2022-06-08 02:55:55,225 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+
+2022-06-08 02:55:55,923 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5210, 4000, 820) DIR:(100, 0, 0) SPD:300
+2022-06-08 02:55:55,926 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5210,4000,820),dir:(100,0,0),spd:300
+
+2022-06-08 02:55:56,128 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5210, 4000, 820) DIR:(100, 0, 0) SPD:0
+2022-06-08 02:55:56,131 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5210,4000,820),dir:(100,0,0),spd:0
+
+2022-06-08 02:55:56,191 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5210, 4000, 820) DIR:(98, 19, 0) SPD:0
+2022-06-08 02:55:56,195 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5210,4000,820),dir:(98,19,0),spd:0
+
+2022-06-08 02:55:56,197 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5215, 4001, 820) DIR:(98, 19, 0) SPD:300
+2022-06-08 02:55:56,198 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5215,4001,820),dir:(98,19,0),spd:300
+
+2022-06-08 02:55:56,274 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5240, 4011, 820) DIR:(93, 36, 0) SPD:300
+2022-06-08 02:55:56,277 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5240,4011,820),dir:(93,36,0),spd:300
+
+2022-06-08 02:55:56,382 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5260, 4026, 820) DIR:(85, 52, 0) SPD:300
+2022-06-08 02:55:56,388 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5260,4026,820),dir:(85,52,0),spd:300
+
+2022-06-08 02:55:56,411 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5260, 4026, 820) DIR:(73, 69, 0) SPD:0
+2022-06-08 02:55:56,413 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5260,4026,820),dir:(73,69,0),spd:0
+
+2022-06-08 02:55:56,469 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5260, 4026, 820) DIR:(73, 69, 0) SPD:0
+2022-06-08 02:55:56,472 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5260,4026,820),dir:(73,69,0),spd:0
+
+2022-06-08 02:55:56,493 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5263, 4030, 820) DIR:(57, 82, 0) SPD:300
+2022-06-08 02:55:56,495 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5263,4030,820),dir:(57,82,0),spd:300
+
+2022-06-08 02:55:56,591 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5278, 4050, 820) DIR:(57, 82, 0) SPD:300
+2022-06-08 02:55:56,597 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5278,4050,820),dir:(57,82,0),spd:300
+
+2022-06-08 02:55:56,782 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5300, 4105, 820) DIR:(41, 91, 0) SPD:300
+2022-06-08 02:55:56,785 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5300,4105,820),dir:(41,91,0),spd:300
+
+2022-06-08 02:55:57,317 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5333, 4270, 820) DIR:(24, 97, 0) SPD:300
+2022-06-08 02:55:57,320 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5333,4270,820),dir:(24,97,0),spd:300
+
+2022-06-08 02:55:58,229 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5333, 4270, 820) DIR:(24, 97, 0) SPD:0
+2022-06-08 02:55:58,230 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(5333,4270,820),dir:(24,97,0),spd:0
+
+2022-06-08 02:55:58,517 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5316, 4185, 820) DIR:(24, 97, 0) SPD:-300
+2022-06-08 02:55:58,521 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5316,4185,820),dir:(24,97,0),spd:-300
+
+2022-06-08 02:55:59,086 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5316, 4185, 820) DIR:(24, 97, 0) SPD:0
+2022-06-08 02:55:59,088 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5316,4185,820),dir:(24,97,0),spd:0
+
+2022-06-08 02:55:59,597 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(24, 97, 0) SPD:300
+2022-06-08 02:55:59,599 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5346,4335,820),dir:(24,97,0),spd:300
+
+2022-06-08 02:56:00,191 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(24, 97, 0) SPD:0
+2022-06-08 02:56:00,192 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(24,97,0),spd:0
+
+2022-06-08 02:56:00,869 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(7, 100, 0) SPD:0
+2022-06-08 02:56:00,871 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(7,100,0),spd:0
+
+2022-06-08 02:56:01,016 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-11, 99, 0) SPD:0
+2022-06-08 02:56:01,018 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-11,99,0),spd:0
+
+2022-06-08 02:56:01,108 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-30, 95, 0) SPD:0
+2022-06-08 02:56:01,112 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-30,95,0),spd:0
+
+2022-06-08 02:56:01,209 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-49, 87, 0) SPD:0
+2022-06-08 02:56:01,211 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-49,87,0),spd:0
+
+2022-06-08 02:56:01,313 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-66, 75, 0) SPD:0
+2022-06-08 02:56:01,324 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-66,75,0),spd:0
+
+2022-06-08 02:56:01,412 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-78, 62, 0) SPD:0
+2022-06-08 02:56:01,416 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-78,62,0),spd:0
+
+2022-06-08 02:56:01,515 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-89, 45, 0) SPD:0
+2022-06-08 02:56:01,522 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-89,45,0),spd:0
+
+2022-06-08 02:56:02,170 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-96, 28, 0) SPD:0
+2022-06-08 02:56:02,173 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-96,28,0),spd:0
+
+2022-06-08 02:56:02,383 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-99, 11, 0) SPD:0
+2022-06-08 02:56:02,388 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-99,11,0),spd:0
+
+2022-06-08 02:56:02,455 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-100, -7, 0) SPD:0
+2022-06-08 02:56:02,458 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-100,-7,0),spd:0
+
+2022-06-08 02:56:03,385 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-97, -25, 0) SPD:0
+2022-06-08 02:56:03,388 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-97,-25,0),spd:0
+
+2022-06-08 02:56:03,888 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-100, -6, 0) SPD:0
+2022-06-08 02:56:03,896 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5346,4335,820),dir:(-100,-6,0),spd:0
+
+2022-06-08 02:56:08,078 [ 1] INFO  Unity: MoveForward
+2022-06-08 02:56:08,079 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5000,4000,820) DIR:(100,0,0) SPD:0
+2022-06-08 02:56:09,019 [ 1] INFO  Unity: Stop
+2022-06-08 02:56:09,034 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(100,0,0) SPD:300
+2022-06-08 02:56:09,721 [ 1] INFO  Unity: SetDirection:(98, 19, 0)
+2022-06-08 02:56:09,723 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(100,0,0) SPD:0
+2022-06-08 02:56:09,834 [ 1] INFO  Unity: SetDirection:(93, 37, 0)
+2022-06-08 02:56:09,836 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(98,19,0) SPD:0
+2022-06-08 02:56:09,934 [ 1] INFO  Unity: SetDirection:(85, 53, 0)
+2022-06-08 02:56:09,936 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(93,37,0) SPD:0
+2022-06-08 02:56:10,021 [ 1] INFO  Unity: SetDirection:(72, 69, 0)
+2022-06-08 02:56:10,023 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(85,53,0) SPD:0
+2022-06-08 02:56:10,142 [ 1] INFO  Unity: SetDirection:(57, 82, 0)
+2022-06-08 02:56:10,145 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(72,69,0) SPD:0
+2022-06-08 02:56:11,991 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5346, 4335, 820) DIR:(-97, -23, 0) SPD:0
+2022-06-08 02:56:11,997 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5346,4335,820),dir:(-97,-23,0),spd:0
+
+2022-06-08 02:56:13,517 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4886, 4243, 820) DIR:(-97, -23, 0) SPD:300
+2022-06-08 02:56:13,519 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4886,4243,820),dir:(-97,-23,0),spd:300
+
+2022-06-08 02:56:14,219 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4886, 4243, 820) DIR:(-97, -23, 0) SPD:0
+2022-06-08 02:56:14,221 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(4886,4243,820),dir:(-97,-23,0),spd:0
+
+2022-06-08 02:56:15,485 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5271, 4320, 820) DIR:(-97, -23, 0) SPD:-300
+2022-06-08 02:56:15,488 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5271,4320,820),dir:(-97,-23,0),spd:-300
+
+2022-06-08 02:56:15,673 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5271, 4320, 820) DIR:(-97, -23, 0) SPD:0
+2022-06-08 02:56:15,675 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5271,4320,820),dir:(-97,-23,0),spd:0
+
+2022-06-08 02:56:15,976 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5191, 4304, 820) DIR:(-97, -23, 0) SPD:300
+2022-06-08 02:56:15,980 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5191,4304,820),dir:(-97,-23,0),spd:300
+
+2022-06-08 02:56:16,095 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5191, 4304, 820) DIR:(-97, -23, 0) SPD:0
+2022-06-08 02:56:16,098 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(5191,4304,820),dir:(-97,-23,0),spd:0
+
+2022-06-08 02:56:16,472 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5296, 4325, 820) DIR:(-97, -23, 0) SPD:-300
+2022-06-08 02:56:16,475 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5296,4325,820),dir:(-97,-23,0),spd:-300
+
+2022-06-08 02:56:16,552 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5296, 4325, 820) DIR:(-97, -23, 0) SPD:0
+2022-06-08 02:56:16,557 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5296,4325,820),dir:(-97,-23,0),spd:0
+
+2022-06-08 02:56:18,551 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4696, 4205, 820) DIR:(-97, -23, 0) SPD:300
+2022-06-08 02:56:18,558 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4696,4205,820),dir:(-97,-23,0),spd:300
+
+2022-06-08 02:56:18,793 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4696, 4205, 820) DIR:(-97, -23, 0) SPD:0
+2022-06-08 02:56:18,796 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(4696,4205,820),dir:(-97,-23,0),spd:0
+
+2022-06-08 02:56:19,368 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4866, 4239, 820) DIR:(-97, -23, 0) SPD:-300
+2022-06-08 02:56:19,372 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4866,4239,820),dir:(-97,-23,0),spd:-300
+
+2022-06-08 02:56:19,377 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4871, 4240, 820) DIR:(-97, -23, 0) SPD:-300
+2022-06-08 02:56:19,381 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(4871,4240,820),dir:(-97,-23,0),spd:-300
+
+2022-06-08 02:56:20,235 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5101, 4262, 801) DIR:(-97, -23, 0) SPD:-300
+2022-06-08 02:56:20,236 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5101,4262,801),dir:(-97,-23,0),spd:-300
+
+2022-06-08 02:56:21,010 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-97, -23, 0) SPD:-300
+2022-06-08 02:56:21,018 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5326,4307,801),dir:(-97,-23,0),spd:-300
+
+2022-06-08 02:56:21,095 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-97, -23, 0) SPD:0
+2022-06-08 02:56:21,099 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(-97,-23,0),spd:0
+
+2022-06-08 02:56:21,231 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-91, -42, 0) SPD:0
+2022-06-08 02:56:21,233 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(-91,-42,0),spd:0
+
+2022-06-08 02:56:21,310 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-81, -59, 0) SPD:0
+2022-06-08 02:56:21,313 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(-81,-59,0),spd:0
+
+2022-06-08 02:56:21,378 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-69, -72, 0) SPD:0
+2022-06-08 02:56:21,384 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(-69,-72,0),spd:0
+
+2022-06-08 02:56:21,457 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-56, -83, 0) SPD:0
+2022-06-08 02:56:21,460 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(-56,-83,0),spd:0
+
+2022-06-08 02:56:21,565 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-40, -92, 0) SPD:0
+2022-06-08 02:56:21,567 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(-40,-92,0),spd:0
+
+2022-06-08 02:56:21,659 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(-20, -98, 0) SPD:0
+2022-06-08 02:56:21,661 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(-20,-98,0),spd:0
+
+2022-06-08 02:56:21,740 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(0, -100, 0) SPD:0
+2022-06-08 02:56:21,742 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(0,-100,0),spd:0
+
+2022-06-08 02:56:22,222 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(20, -98, 0) SPD:0
+2022-06-08 02:56:22,226 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4307,801),dir:(20,-98,0),spd:0
+
+2022-06-08 02:56:23,682 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4307, 801) DIR:(1, -100, 0) SPD:0
+2022-06-08 02:56:23,687 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(5326,4307,801),dir:(1,-100,0),spd:0
+
+2022-06-08 02:56:25,574 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4867, 801) DIR:(1, -100, 0) SPD:-300
+2022-06-08 02:56:25,578 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5326,4867,801),dir:(1,-100,0),spd:-300
+
+2022-06-08 02:56:26,459 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4867, 801) DIR:(1, -100, 0) SPD:0
+2022-06-08 02:56:26,462 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5326,4867,801),dir:(1,-100,0),spd:0
+
+2022-06-08 02:56:28,201 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4357, 801) DIR:(1, -100, 0) SPD:300
+2022-06-08 02:56:28,203 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5326,4357,801),dir:(1,-100,0),spd:300
+
+2022-06-08 02:56:30,533 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4357, 801) DIR:(1, -100, 0) SPD:0
+2022-06-08 02:56:30,538 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4357,801),dir:(1,-100,0),spd:0
+
+2022-06-08 02:56:39,567 [ 1] INFO  Unity: SetDirection:(72, 70, 0)
+2022-06-08 02:56:39,568 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(57,82,0) SPD:0
+2022-06-08 02:56:39,708 [ 1] INFO  Unity: SetDirection:(84, 55, 0)
+2022-06-08 02:56:39,710 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(72,70,0) SPD:0
+2022-06-08 02:56:41,011 [ 1] INFO  Unity: SetDirection:(92, 38, 0)
+2022-06-08 02:56:41,013 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(84,55,0) SPD:0
+2022-06-08 02:56:43,813 [ 1] INFO  Unity: MoveBack
+2022-06-08 02:56:43,817 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5285,4000,820) DIR:(92,38,0) SPD:0
+2022-06-08 02:56:44,132 [ 1] INFO  Unity: Stop
+2022-06-08 02:56:44,134 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5190,3962,820) DIR:(92,38,0) SPD:-300
+2022-06-08 02:56:45,015 [ 1] INFO  Unity: MoveBack
+2022-06-08 02:56:45,017 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5190,3962,820) DIR:(92,38,0) SPD:0
+2022-06-08 02:56:45,859 [ 1] INFO  Unity: SetPosition:(4980, 3874, 801)
+2022-06-08 02:56:45,861 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(4935,3860,820) DIR:(92,38,0) SPD:-300
+2022-06-08 02:56:45,979 [ 1] INFO  Unity: Stop
+2022-06-08 02:56:45,980 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(4945,3860,801) DIR:(92,38,0) SPD:-300
+2022-06-08 02:57:03,451 [ 1] INFO  Unity: MoveForward
+2022-06-08 02:57:03,453 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(4945,3860,801) DIR:(92,38,0) SPD:0
+2022-06-08 02:57:04,795 [ 1] INFO  Unity: Stop
+2022-06-08 02:57:04,797 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5350,4022,801) DIR:(92,38,0) SPD:300
+2022-06-08 02:57:05,207 [ 1] INFO  Unity: SetDirection:(84, 54, 0)
+2022-06-08 02:57:05,209 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5350,4022,801) DIR:(92,38,0) SPD:0
+2022-06-08 02:57:05,306 [ 1] INFO  Unity: SetDirection:(71, 70, 0)
+2022-06-08 02:57:05,307 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5350,4022,801) DIR:(84,54,0) SPD:0
+2022-06-08 02:57:05,397 [ 1] INFO  Unity: SetDirection:(55, 83, 0)
+2022-06-08 02:57:05,400 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5350,4022,801) DIR:(71,70,0) SPD:0
+2022-06-08 02:57:05,503 [ 1] INFO  Unity: SetDirection:(37, 93, 0)
+2022-06-08 02:57:05,504 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5350,4022,801) DIR:(55,83,0) SPD:0
+2022-06-08 02:57:05,621 [ 1] INFO  Unity: SetDirection:(20, 98, 0)
+2022-06-08 02:57:05,626 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5350,4022,801) DIR:(37,93,0) SPD:0
+2022-06-08 02:57:09,018 [ 1] INFO  Unity: MoveBack
+2022-06-08 02:57:09,022 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5350,4022,801) DIR:(20,98,0) SPD:0
+2022-06-08 02:57:09,989 [ 1] INFO  Unity: Stop
+2022-06-08 02:57:09,991 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5291,3727,801) DIR:(20,98,0) SPD:-300
+2022-06-08 02:57:13,066 [ 1] INFO  Unity: SetDirection:(1, 100, 0)
+2022-06-08 02:57:13,068 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5291,3727,801) DIR:(20,98,0) SPD:0
+2022-06-08 02:57:13,223 [ 1] INFO  Unity: SetDirection:(-19, 98, 0)
+2022-06-08 02:57:13,228 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5291,3727,801) DIR:(1,100,0) SPD:0
+2022-06-08 02:57:13,358 [ 1] INFO  Unity: SetDirection:(-37, 93, 0)
+2022-06-08 02:57:13,359 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5291,3727,801) DIR:(-19,98,0) SPD:0
+2022-06-08 02:57:17,461 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4357, 801) DIR:(19, -98, 0) SPD:0
+2022-06-08 02:57:17,465 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4357,801),dir:(19,-98,0),spd:0
+
+2022-06-08 02:57:17,569 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4357, 801) DIR:(1, -100, 0) SPD:0
+2022-06-08 02:57:17,571 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4357,801),dir:(1,-100,0),spd:0
+
+2022-06-08 02:57:17,685 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4357, 801) DIR:(-18, -98, 0) SPD:0
+2022-06-08 02:57:17,690 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5326,4357,801),dir:(-18,-98,0),spd:0
+
+2022-06-08 02:57:18,717 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5326, 4357, 801) DIR:(-37, -93, 0) SPD:0
+2022-06-08 02:57:18,721 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5326,4357,801),dir:(-37,-93,0),spd:0
+
+2022-06-08 02:57:21,094 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5042, 3647, 801) DIR:(-37, -93, 0) SPD:300
+2022-06-08 02:57:21,096 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5042,3647,801),dir:(-37,-93,0),spd:300
+
+2022-06-08 02:57:21,099 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5042, 3647, 801) DIR:(-37, -93, 0) SPD:0
+2022-06-08 02:57:21,101 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(5042,3647,801),dir:(-37,-93,0),spd:0
+
+2022-06-08 02:57:22,688 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5230, 4117, 801) DIR:(-37, -93, 0) SPD:-300
+2022-06-08 02:57:22,690 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5230,4117,801),dir:(-37,-93,0),spd:-300
+
+2022-06-08 02:57:23,237 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5268, 4240, 801) DIR:(-37, -93, 0) SPD:-300
+2022-06-08 02:57:23,241 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5268,4240,801),dir:(-37,-93,0),spd:-300
+
+2022-06-08 02:57:23,752 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5268, 4240, 801) DIR:(-37, -93, 0) SPD:0
+2022-06-08 02:57:23,753 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5268,4240,801),dir:(-37,-93,0),spd:0
+
+2022-06-08 02:57:24,127 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-37, -93, 0) SPD:300
+2022-06-08 02:57:24,128 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5224,4130,801),dir:(-37,-93,0),spd:300
+
+2022-06-08 02:57:25,422 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-37, -93, 0) SPD:0
+2022-06-08 02:57:25,426 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-37,-93,0),spd:0
+
+2022-06-08 02:57:25,575 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-20, -98, 0) SPD:0
+2022-06-08 02:57:25,579 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-20,-98,0),spd:0
+
+2022-06-08 02:57:25,694 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-1, -100, 0) SPD:0
+2022-06-08 02:57:25,703 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-1,-100,0),spd:0
+
+2022-06-08 02:57:25,795 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(18, -98, 0) SPD:0
+2022-06-08 02:57:25,799 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(18,-98,0),spd:0
+
+2022-06-08 02:57:25,919 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(38, -92, 0) SPD:0
+2022-06-08 02:57:25,920 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(38,-92,0),spd:0
+
+2022-06-08 02:57:25,988 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(56, -83, 0) SPD:0
+2022-06-08 02:57:25,990 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(56,-83,0),spd:0
+
+2022-06-08 02:57:26,059 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(70, -71, 0) SPD:0
+2022-06-08 02:57:26,060 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(70,-71,0),spd:0
+
+2022-06-08 02:57:26,178 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(83, -55, 0) SPD:0
+2022-06-08 02:57:26,182 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(83,-55,0),spd:0
+
+2022-06-08 02:57:26,252 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(93, -37, 0) SPD:0
+2022-06-08 02:57:26,254 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(93,-37,0),spd:0
+
+2022-06-08 02:57:26,342 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(98, -20, 0) SPD:0
+2022-06-08 02:57:26,343 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(98,-20,0),spd:0
+
+2022-06-08 02:57:26,461 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(100, 1, 0) SPD:0
+2022-06-08 02:57:26,462 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(100,1,0),spd:0
+
+2022-06-08 02:57:26,533 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(98, 21, 0) SPD:0
+2022-06-08 02:57:26,536 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(98,21,0),spd:0
+
+2022-06-08 02:57:26,643 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(92, 38, 0) SPD:0
+2022-06-08 02:57:26,646 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(92,38,0),spd:0
+
+2022-06-08 02:57:26,720 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(83, 56, 0) SPD:0
+2022-06-08 02:57:26,725 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(83,56,0),spd:0
+
+2022-06-08 02:57:26,813 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(71, 70, 0) SPD:0
+2022-06-08 02:57:26,815 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(71,70,0),spd:0
+
+2022-06-08 02:57:26,937 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(55, 83, 0) SPD:0
+2022-06-08 02:57:26,941 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(55,83,0),spd:0
+
+2022-06-08 02:57:27,007 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(37, 93, 0) SPD:0
+2022-06-08 02:57:27,012 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(37,93,0),spd:0
+
+2022-06-08 02:57:27,114 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(20, 98, 0) SPD:0
+2022-06-08 02:57:27,116 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(20,98,0),spd:0
+
+2022-06-08 02:57:27,227 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-1, 100, 0) SPD:0
+2022-06-08 02:57:27,233 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-1,100,0),spd:0
+
+2022-06-08 02:57:27,285 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-21, 98, 0) SPD:0
+2022-06-08 02:57:27,293 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-21,98,0),spd:0
+
+2022-06-08 02:57:27,405 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-38, 92, 0) SPD:0
+2022-06-08 02:57:27,408 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-38,92,0),spd:0
+
+2022-06-08 02:57:27,520 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-56, 83, 0) SPD:0
+2022-06-08 02:57:27,525 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-56,83,0),spd:0
+
+2022-06-08 02:57:27,578 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-70, 71, 0) SPD:0
+2022-06-08 02:57:27,581 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-70,71,0),spd:0
+
+2022-06-08 02:57:27,698 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-83, 55, 0) SPD:0
+2022-06-08 02:57:27,702 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-83,55,0),spd:0
+
+2022-06-08 02:57:27,772 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-93, 37, 0) SPD:0
+2022-06-08 02:57:27,774 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-93,37,0),spd:0
+
+2022-06-08 02:57:27,855 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-98, 20, 0) SPD:0
+2022-06-08 02:57:27,861 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-98,20,0),spd:0
+
+2022-06-08 02:57:27,958 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-100, -1, 0) SPD:0
+2022-06-08 02:57:27,959 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-100,-1,0),spd:0
+
+2022-06-08 02:57:28,042 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-98, -21, 0) SPD:0
+2022-06-08 02:57:28,044 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-98,-21,0),spd:0
+
+2022-06-08 02:57:28,145 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-92, -38, 0) SPD:0
+2022-06-08 02:57:28,147 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-92,-38,0),spd:0
+
+2022-06-08 02:57:28,220 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-83, -56, 0) SPD:0
+2022-06-08 02:57:28,223 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-83,-56,0),spd:0
+
+2022-06-08 02:57:28,359 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-71, -70, 0) SPD:0
+2022-06-08 02:57:28,362 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-71,-70,0),spd:0
+
+2022-06-08 02:57:28,634 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-56, -83, 0) SPD:0
+2022-06-08 02:57:28,636 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-56,-83,0),spd:0
+
+2022-06-08 02:57:28,802 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-40, -92, 0) SPD:0
+2022-06-08 02:57:28,806 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-40,-92,0),spd:0
+
+2022-06-08 02:57:28,873 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-21, -98, 0) SPD:0
+2022-06-08 02:57:28,878 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-21,-98,0),spd:0
+
+2022-06-08 02:57:29,007 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-1, -100, 0) SPD:0
+2022-06-08 02:57:29,008 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-1,-100,0),spd:0
+
+2022-06-08 02:57:29,323 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(17, -99, 0) SPD:0
+2022-06-08 02:57:29,326 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(17,-99,0),spd:0
+
+2022-06-08 02:57:29,517 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-1, -100, 0) SPD:0
+2022-06-08 02:57:29,520 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-1,-100,0),spd:0
+
+2022-06-08 02:57:29,973 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-19, -98, 0) SPD:0
+2022-06-08 02:57:29,978 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-19,-98,0),spd:0
+
+2022-06-08 02:57:30,110 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-36, -93, 0) SPD:0
+2022-06-08 02:57:30,114 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-36,-93,0),spd:0
+
+2022-06-08 02:57:30,158 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-52, -85, 0) SPD:0
+2022-06-08 02:57:30,162 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-52,-85,0),spd:0
+
+2022-06-08 02:57:30,251 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-66, -75, 0) SPD:0
+2022-06-08 02:57:30,256 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-66,-75,0),spd:0
+
+2022-06-08 02:57:30,360 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-78, -62, 0) SPD:0
+2022-06-08 02:57:30,363 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-78,-62,0),spd:0
+
+2022-06-08 02:57:30,408 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-88, -48, 0) SPD:0
+2022-06-08 02:57:30,412 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-88,-48,0),spd:0
+
+2022-06-08 02:57:30,503 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-95, -32, 0) SPD:0
+2022-06-08 02:57:30,504 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-95,-32,0),spd:0
+
+2022-06-08 02:57:30,642 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-99, -15, 0) SPD:0
+2022-06-08 02:57:30,664 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5224,4130,801),dir:(-99,-15,0),spd:0
+
+2022-06-08 02:57:30,692 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5224, 4130, 801) DIR:(-100, 2, 0) SPD:0
+2022-06-08 02:57:30,695 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5224,4130,801),dir:(-100,2,0),spd:0
+
+2022-06-08 02:57:31,277 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5054, 4130, 801) DIR:(-100, 2, 0) SPD:300
+2022-06-08 02:57:31,279 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5054,4130,801),dir:(-100,2,0),spd:300
+
+2022-06-08 02:57:31,429 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5054, 4130, 801) DIR:(-100, 2, 0) SPD:0
+2022-06-08 02:57:31,433 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5054,4130,801),dir:(-100,2,0),spd:0
+
+2022-06-08 02:57:31,507 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5054, 4130, 801) DIR:(-98, -18, 0) SPD:0
+2022-06-08 02:57:31,510 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5054,4130,801),dir:(-98,-18,0),spd:0
+
+2022-06-08 02:57:31,544 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5054, 4130, 801) DIR:(-92, -38, 0) SPD:0
+2022-06-08 02:57:31,549 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5054,4130,801),dir:(-92,-38,0),spd:0
+
+2022-06-08 02:57:31,649 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5034, 4122, 801) DIR:(-92, -38, 0) SPD:300
+2022-06-08 02:57:31,653 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5034,4122,801),dir:(-92,-38,0),spd:300
+
+2022-06-08 02:57:31,748 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5002, 4098, 801) DIR:(-83, -56, 0) SPD:300
+2022-06-08 02:57:31,751 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5002,4098,801),dir:(-83,-56,0),spd:300
+
+2022-06-08 02:57:32,048 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4930, 4026, 801) DIR:(-72, -70, 0) SPD:300
+2022-06-08 02:57:32,050 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4930,4026,801),dir:(-72,-70,0),spd:300
+
+2022-06-08 02:57:32,077 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4930, 4026, 801) DIR:(-72, -70, 0) SPD:0
+2022-06-08 02:57:32,081 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(4930,4026,801),dir:(-72,-70,0),spd:0
+
+2022-06-08 02:57:32,929 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5138, 4234, 801) DIR:(-72, -70, 0) SPD:-300
+2022-06-08 02:57:32,933 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5138,4234,801),dir:(-72,-70,0),spd:-300
+
+2022-06-08 02:57:33,053 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5158, 4249, 801) DIR:(-83, -55, 0) SPD:-300
+2022-06-08 02:57:33,058 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5158,4249,801),dir:(-83,-55,0),spd:-300
+
+2022-06-08 02:57:33,061 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5119, 4205, 801) DIR:(-83, -55, 0) SPD:300
+2022-06-08 02:57:33,065 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5119,4205,801),dir:(-83,-55,0),spd:300
+
+2022-06-08 02:57:33,068 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5114, 4203, 801) DIR:(-92, -39, 0) SPD:300
+2022-06-08 02:57:33,070 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5114,4203,801),dir:(-92,-39,0),spd:300
+
+2022-06-08 02:57:33,120 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5109, 4201, 801) DIR:(-92, -39, 0) SPD:300
+2022-06-08 02:57:33,124 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5109,4201,801),dir:(-92,-39,0),spd:300
+
+2022-06-08 02:57:33,168 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5089, 4193, 801) DIR:(-92, -39, 0) SPD:300
+2022-06-08 02:57:33,174 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5089,4193,801),dir:(-92,-39,0),spd:300
+
+2022-06-08 02:57:33,606 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4959, 4167, 801) DIR:(-98, -20, 0) SPD:300
+2022-06-08 02:57:33,610 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4959,4167,801),dir:(-98,-20,0),spd:300
+
+2022-06-08 02:57:33,686 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4929, 4155, 801) DIR:(-92, -40, 0) SPD:300
+2022-06-08 02:57:33,690 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4929,4155,801),dir:(-92,-40,0),spd:300
+
+2022-06-08 02:57:33,744 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4917, 4146, 801) DIR:(-82, -58, 0) SPD:300
+2022-06-08 02:57:33,748 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4917,4146,801),dir:(-82,-58,0),spd:300
+
+2022-06-08 02:57:33,774 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4917, 4146, 801) DIR:(-82, -58, 0) SPD:0
+2022-06-08 02:57:33,778 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4917,4146,801),dir:(-82,-58,0),spd:0
+
+2022-06-08 02:57:33,835 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4917, 4146, 801) DIR:(-70, -71, 0) SPD:0
+2022-06-08 02:57:33,837 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(4917,4146,801),dir:(-70,-71,0),spd:0
+
+2022-06-08 02:57:33,862 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4921, 4150, 801) DIR:(-70, -71, 0) SPD:-300
+2022-06-08 02:57:33,863 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4921,4150,801),dir:(-70,-71,0),spd:-300
+
+2022-06-08 02:57:33,976 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4942, 4178, 801) DIR:(-54, -84, 0) SPD:-300
+2022-06-08 02:57:33,982 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4942,4178,801),dir:(-54,-84,0),spd:-300
+
+2022-06-08 02:57:34,550 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5008, 4343, 801) DIR:(-37, -93, 0) SPD:-300
+2022-06-08 02:57:34,555 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5008,4343,801),dir:(-37,-93,0),spd:-300
+
+2022-06-08 02:57:34,626 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5026, 4367, 801) DIR:(-53, -85, 0) SPD:-300
+2022-06-08 02:57:34,629 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5026,4367,801),dir:(-53,-85,0),spd:-300
+
+2022-06-08 02:57:35,138 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5116, 4487, 801) DIR:(-69, -72, 0) SPD:-300
+2022-06-08 02:57:35,140 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5116,4487,801),dir:(-69,-72,0),spd:-300
+
+2022-06-08 02:57:35,273 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5140, 4519, 801) DIR:(-55, -84, 0) SPD:-300
+2022-06-08 02:57:35,278 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(5140,4519,801),dir:(-55,-84,0),spd:-300
+
+2022-06-08 02:57:35,321 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5140, 4519, 801) DIR:(-37, -93, 0) SPD:0
+2022-06-08 02:57:35,326 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5140,4519,801),dir:(-37,-93,0),spd:0
+
+2022-06-08 02:57:35,330 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5138, 4514, 801) DIR:(-37, -93, 0) SPD:300
+2022-06-08 02:57:35,331 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(5138,4514,801),dir:(-37,-93,0),spd:300
+
+2022-06-08 02:57:35,360 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5132, 4499, 801) DIR:(-37, -93, 0) SPD:300
+2022-06-08 02:57:35,362 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5132,4499,801),dir:(-37,-93,0),spd:300
+
+2022-06-08 02:57:35,498 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5124, 4459, 801) DIR:(-18, -98, 0) SPD:300
+2022-06-08 02:57:35,505 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5124,4459,801),dir:(-18,-98,0),spd:300
+
+2022-06-08 02:57:36,114 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5124, 4279, 801) DIR:(0, -100, 0) SPD:300
+2022-06-08 02:57:36,117 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5124,4279,801),dir:(0,-100,0),spd:300
+
+2022-06-08 02:57:36,203 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5118, 4249, 801) DIR:(-20, -98, 0) SPD:300
+2022-06-08 02:57:36,207 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5118,4249,801),dir:(-20,-98,0),spd:300
+
+2022-06-08 02:57:36,322 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(5104, 4214, 801) DIR:(-39, -92, 0) SPD:300
+2022-06-08 02:57:36,323 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(5104,4214,801),dir:(-39,-92,0),spd:300
+
+2022-06-08 02:57:36,936 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4993, 4066, 801) DIR:(-56, -83, 0) SPD:300
+2022-06-08 02:57:36,938 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4993,4066,801),dir:(-56,-83,0),spd:300
+
+2022-06-08 02:57:36,967 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4993, 4066, 801) DIR:(-39, -92, 0) SPD:0
+2022-06-08 02:57:36,973 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4993,4066,801),dir:(-39,-92,0),spd:0
+
+2022-06-08 02:57:37,033 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4993, 4066, 801) DIR:(-39, -92, 0) SPD:0
+2022-06-08 02:57:37,037 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4993,4066,801),dir:(-39,-92,0),spd:0
+
+2022-06-08 02:57:37,119 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4993, 4066, 801) DIR:(-22, -98, 0) SPD:0
+2022-06-08 02:57:37,123 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4993,4066,801),dir:(-22,-98,0),spd:0
+
+2022-06-08 02:57:37,181 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4993, 4066, 801) DIR:(-1, -100, 0) SPD:0
+2022-06-08 02:57:37,183 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveBack entity:(1:pos:(4993,4066,801),dir:(-1,-100,0),spd:0
+
+2022-06-08 02:57:37,217 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4993, 4091, 801) DIR:(-1, -100, 0) SPD:-300
+2022-06-08 02:57:37,219 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4993,4091,801),dir:(-1,-100,0),spd:-300
+
+2022-06-08 02:57:37,402 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4984, 4136, 801) DIR:(18, -98, 0) SPD:-300
+2022-06-08 02:57:37,406 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4984,4136,801),dir:(18,-98,0),spd:-300
+
+2022-06-08 02:57:37,558 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4972, 4141, 801) DIR:(35, -94, 0) SPD:-300
+2022-06-08 02:57:37,559 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4972,4141,801),dir:(35,-94,0),spd:-300
+
+2022-06-08 02:57:38,754 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4854, 4458, 801) DIR:(35, -94, 0) SPD:-300
+2022-06-08 02:57:38,758 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4854,4458,801),dir:(35,-94,0),spd:-300
+
+2022-06-08 02:57:39,847 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4726, 4778, 801) DIR:(35, -94, 0) SPD:-300
+2022-06-08 02:57:39,854 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4726,4778,801),dir:(35,-94,0),spd:-300
+
+2022-06-08 02:57:40,725 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4726, 4778, 801) DIR:(35, -94, 0) SPD:0
+2022-06-08 02:57:40,729 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:MoveFwd entity:(1:pos:(4726,4778,801),dir:(35,-94,0),spd:0
+
+2022-06-08 02:57:40,733 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4754, 4725, 801) DIR:(35, -94, 0) SPD:300
+2022-06-08 02:57:40,736 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4754,4725,801),dir:(35,-94,0),spd:300
+
+2022-06-08 02:57:41,028 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(35, -94, 0) SPD:300
+2022-06-08 02:57:41,030 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:Idle entity:(1:pos:(4786,4645,801),dir:(35,-94,0),spd:300
+
+2022-06-08 02:57:41,856 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(35, -94, 0) SPD:0
+2022-06-08 02:57:41,859 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(35,-94,0),spd:0
+
+2022-06-08 02:57:41,966 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(52, -85, 0) SPD:0
+2022-06-08 02:57:41,968 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(52,-85,0),spd:0
+
+2022-06-08 02:57:42,026 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(68, -73, 0) SPD:0
+2022-06-08 02:57:42,030 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(68,-73,0),spd:0
+
+2022-06-08 02:57:42,119 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(80, -60, 0) SPD:0
+2022-06-08 02:57:42,121 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(80,-60,0),spd:0
+
+2022-06-08 02:57:42,191 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(89, -45, 0) SPD:0
+2022-06-08 02:57:42,192 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(89,-45,0),spd:0
+
+2022-06-08 02:57:42,309 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(96, -29, 0) SPD:0
+2022-06-08 02:57:42,311 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(96,-29,0),spd:0
+
+2022-06-08 02:57:42,393 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(100, -8, 0) SPD:0
+2022-06-08 02:57:42,397 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(100,-8,0),spd:0
+
+2022-06-08 02:57:42,502 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(99, 13, 0) SPD:0
+2022-06-08 02:57:42,504 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(99,13,0),spd:0
+
+2022-06-08 02:57:42,593 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(94, 33, 0) SPD:0
+2022-06-08 02:57:42,594 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(94,33,0),spd:0
+
+2022-06-08 02:57:42,929 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(86, 51, 0) SPD:0
+2022-06-08 02:57:42,931 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(86,51,0),spd:0
+
+2022-06-08 02:57:43,026 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(94, 33, 0) SPD:0
+2022-06-08 02:57:43,028 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(94,33,0),spd:0
+
+2022-06-08 02:57:43,133 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(99, 14, 0) SPD:0
+2022-06-08 02:57:43,135 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(99,14,0),spd:0
+
+2022-06-08 02:57:43,208 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(100, -4, 0) SPD:0
+2022-06-08 02:57:43,210 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(100,-4,0),spd:0
+
+2022-06-08 02:57:43,298 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(97, -24, 0) SPD:0
+2022-06-08 02:57:43,300 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(97,-24,0),spd:0
+
+2022-06-08 02:57:43,390 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(91, -41, 0) SPD:0
+2022-06-08 02:57:43,392 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(91,-41,0),spd:0
+
+2022-06-08 02:57:43,560 [ 1] INFO  Unity: OnEntityChanged :ID:1 POS:(4786, 4645, 801) DIR:(81, -59, 0) SPD:0
+2022-06-08 02:57:43,563 [ 1] INFO  Unity: MapEntityUpdateResponse : Entity:1
+   [1]evt:None entity:(1:pos:(4786,4645,801),dir:(81,-59,0),spd:0
+
+2022-06-08 02:57:48,745 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-08 02:57:48,748 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-06-08 02:57:48,814 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:10,CurrentCharacter:10
+2022-06-08 02:57:48,816 [ 1] INFO  Unity: 自己离开：response.characterId：10，User.Instance.CurrentCharacter.Id：10
+2022-06-08 02:57:48,820 [ 1] INFO  Unity: RemoveCharacter:10
+2022-06-08 02:57:48,829 [ 1] INFO  Unity: RemoveCharacter:13
+2022-06-08 02:57:48,832 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-06-08 02:57:48,834 [ 1] INFO  Unity: Character_10_辅导费 OnDestroy :ID:2 POS:(5291, 3727, 801) DIR:(-37, 93, 0) SPD:0 
+2022-06-08 02:57:48,835 [ 1] INFO  Unity: Character_13_牛牛 OnDestroy :ID:1 POS:(4786, 4645, 801) DIR:(81, -59, 0) SPD:0 
+2022-06-08 02:57:48,875 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'Transform' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UnityEngine.Transform.get_position ()
+UIMinimap.Update () (at Assets/Scripts/UI/Minimap/UIMinimap.cs:44)
 }</args></log4net.Error>
-2022-06-08 00:16:45,540 [ 1] INFO  Unity: SetPosition:(5000, 4000, 768)
-2022-06-08 00:16:45,699 [ 1] INFO  Unity: SetPosition:(5000, 4000, 709)
-2022-06-08 00:16:45,815 [ 1] INFO  Unity: SetPosition:(5000, 4000, 648)
-2022-06-08 00:16:45,895 [ 1] INFO  Unity: SetPosition:(5000, 4000, 596)
-2022-06-08 00:16:45,973 [ 1] INFO  Unity: SetPosition:(5000, 4000, 537)
-2022-06-08 00:16:46,044 [ 1] INFO  Unity: SetPosition:(5000, 4000, 485)
-2022-06-08 00:16:46,106 [ 1] INFO  Unity: SetPosition:(5000, 4000, 428)
-2022-06-08 00:16:46,170 [ 1] INFO  Unity: SetPosition:(5000, 4000, 368)
-2022-06-08 00:16:46,329 [ 1] INFO  Unity: SetPosition:(5000, 4000, 215)
-2022-06-08 00:16:46,376 [ 1] INFO  Unity: SetPosition:(5000, 4000, 159)
-2022-06-08 00:16:46,425 [ 1] INFO  Unity: SetPosition:(5000, 4000, 101)
-2022-06-08 00:16:46,475 [ 1] INFO  Unity: SetPosition:(5000, 4000, 40)
-2022-06-08 00:16:46,527 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23)
-2022-06-08 00:16:46,572 [ 1] INFO  Unity: SetPosition:(5000, 4000, -89)
-2022-06-08 00:16:46,621 [ 1] INFO  Unity: SetPosition:(5000, 4000, -157)
-2022-06-08 00:16:46,676 [ 1] INFO  Unity: SetPosition:(5000, 4000, -227)
-2022-06-08 00:16:46,721 [ 1] INFO  Unity: SetPosition:(5000, 4000, -300)
-2022-06-08 00:16:46,777 [ 1] INFO  Unity: SetPosition:(5000, 4000, -376)
-2022-06-08 00:16:46,804 [ 1] INFO  Unity: SetPosition:(5000, 4000, -428)
-2022-06-08 00:16:46,838 [ 1] INFO  Unity: SetPosition:(5000, 4000, -480)
-2022-06-08 00:16:46,872 [ 1] INFO  Unity: SetPosition:(5000, 4000, -534)
-2022-06-08 00:16:46,908 [ 1] INFO  Unity: SetPosition:(5000, 4000, -589)
-2022-06-08 00:16:46,944 [ 1] INFO  Unity: SetPosition:(5000, 4000, -645)
-2022-06-08 00:16:46,976 [ 1] INFO  Unity: SetPosition:(5000, 4000, -703)
-2022-06-08 00:16:47,011 [ 1] INFO  Unity: SetPosition:(5000, 4000, -761)
-2022-06-08 00:16:47,044 [ 1] INFO  Unity: SetPosition:(5000, 4000, -820)
-2022-06-08 00:16:47,071 [ 1] INFO  Unity: SetPosition:(5000, 4000, -881)
-2022-06-08 00:16:47,106 [ 1] INFO  Unity: SetPosition:(5000, 4000, -942)
-2022-06-08 00:16:47,141 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1005)
-2022-06-08 00:16:47,177 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1069)
-2022-06-08 00:16:47,220 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-06-08 00:16:47,221 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-06-08 02:57:48,896 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'Transform' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UnityEngine.Transform.get_position ()
+UIMinimap.Update () (at Assets/Scripts/UI/Minimap/UIMinimap.cs:44)
+}</args></log4net.Error>
+2022-06-08 02:57:48,962 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-08 02:57:48,971 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-08 02:57:52,852 [ 1] INFO  Unity: Select Char:[9]大萨达[Wizard]
+2022-06-08 02:57:53,377 [ 1] INFO  Unity: UserGameEnterRequest::characterId :1
+2022-06-08 02:57:53,404 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-06-08 02:57:53,406 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:2,CurrentMapId:0
+2022-06-08 02:57:53,407 [ 1] INFO  Unity: AddCharacter:9:大萨达 Map:1 Entity:(3:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-08 02:57:53,412 [ 1] INFO  Unity: AddCharacter:13:牛牛 Map:1 Entity:(1:pos:(4786,4645,801),dir:(81,-59,0),spd:0
+2022-06-08 02:57:53,416 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-06-08 02:57:54,029 [ 1] INFO  Unity: SetPosition:(5000, 4000, 768)
+2022-06-08 02:57:54,031 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5000,4000,820) DIR:(100,0,0) SPD:0
+2022-06-08 02:57:54,168 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-08 02:57:54,170 [ 1] INFO  Unity: UIMInimap Init
+2022-06-08 02:57:54,171 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-06-08 02:57:54,801 [ 1] INFO  Unity: MoveForward
+2022-06-08 02:57:54,802 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5000,4000,768) DIR:(100,0,0) SPD:0
+2022-06-08 02:57:54,802 [ 1] INFO  Unity: MoveForward
+2022-06-08 02:57:54,803 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5005,4000,768) DIR:(100,0,0) SPD:300
+2022-06-08 02:57:54,936 [ 1] INFO  Unity: SetPosition:(5045, 4000, 801)
+2022-06-08 02:57:54,938 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5085,4000,768) DIR:(100,0,0) SPD:300
+2022-06-08 02:57:55,041 [ 1] INFO  Unity: Stop
+2022-06-08 02:57:55,042 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(100,0,0) SPD:300
+2022-06-08 02:57:55,043 [ 1] INFO  Unity: Stop
+2022-06-08 02:57:55,043 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(100,0,0) SPD:0
+2022-06-08 02:57:55,269 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
+2022-06-08 02:57:55,270 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(100,0,0) SPD:0
+2022-06-08 02:57:55,369 [ 1] INFO  Unity: SetDirection:(94, 35, 0)
+2022-06-08 02:57:55,370 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(98,18,0) SPD:0
+2022-06-08 02:57:55,451 [ 1] INFO  Unity: SetDirection:(86, 51, 0)
+2022-06-08 02:57:55,452 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(94,35,0) SPD:0
+2022-06-08 02:57:55,538 [ 1] INFO  Unity: SetDirection:(76, 65, 0)
+2022-06-08 02:57:55,539 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(86,51,0) SPD:0
+2022-06-08 02:57:55,625 [ 1] INFO  Unity: SetDirection:(63, 77, 0)
+2022-06-08 02:57:55,627 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(76,65,0) SPD:0
+2022-06-08 02:57:55,705 [ 1] INFO  Unity: SetDirection:(49, 87, 0)
+2022-06-08 02:57:55,706 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(63,77,0) SPD:0
+2022-06-08 02:57:55,754 [ 1] INFO  Unity: MoveForward
+2022-06-08 02:57:55,755 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5100,4000,801) DIR:(49,87,0) SPD:0
+2022-06-08 02:57:55,756 [ 1] INFO  Unity: MoveForward
+2022-06-08 02:57:55,757 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5102,4004,801) DIR:(49,87,0) SPD:300
+2022-06-08 02:57:55,783 [ 1] INFO  Unity: SetDirection:(33, 94, 0)
+2022-06-08 02:57:55,785 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5108,4016,801) DIR:(49,87,0) SPD:300
+2022-06-08 02:57:55,860 [ 1] INFO  Unity: SetPosition:(5084, 4032, 801)
+2022-06-08 02:57:55,861 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5126,4061,801) DIR:(33,94,0) SPD:300
+2022-06-08 02:57:55,902 [ 1] INFO  Unity: SetDirection:(14, 99, 0)
+2022-06-08 02:57:55,903 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5094,4057,801) DIR:(33,94,0) SPD:300
+2022-06-08 02:57:55,988 [ 1] INFO  Unity: Stop
+2022-06-08 02:57:55,989 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5104,4107,801) DIR:(14,99,0) SPD:300
+2022-06-08 02:57:55,990 [ 1] INFO  Unity: Stop
+2022-06-08 02:57:55,990 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:3 POS:(5104,4107,801) DIR:(14,99,0) SPD:0
+2022-06-08 02:57:57,340 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-08 02:57:57,343 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-06-08 02:57:57,378 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:9,CurrentCharacter:9
+2022-06-08 02:57:57,379 [ 1] INFO  Unity: 自己离开：response.characterId：9，User.Instance.CurrentCharacter.Id：9
+2022-06-08 02:57:57,381 [ 1] INFO  Unity: RemoveCharacter:9
+2022-06-08 02:57:57,385 [ 1] INFO  Unity: RemoveCharacter:13
+2022-06-08 02:57:57,388 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-06-08 02:57:57,390 [ 1] INFO  Unity: Character_9_大萨达 OnDestroy :ID:3 POS:(5104, 4107, 801) DIR:(14, 99, 0) SPD:0 
+2022-06-08 02:57:57,391 [ 1] INFO  Unity: Character_9_大萨达 OnDestroy :ID:3 POS:(5104, 4107, 801) DIR:(14, 99, 0) SPD:0 
+2022-06-08 02:57:57,392 [ 1] INFO  Unity: Character_13_牛牛 OnDestroy :ID:1 POS:(4786, 4645, 801) DIR:(81, -59, 0) SPD:0 
+2022-06-08 02:57:57,393 [ 1] INFO  Unity: Character_13_牛牛 OnDestroy :ID:1 POS:(4786, 4645, 801) DIR:(81, -59, 0) SPD:0 
+2022-06-08 02:57:57,440 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'Transform' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UnityEngine.Transform.get_position ()
+UIMinimap.Update () (at Assets/Scripts/UI/Minimap/UIMinimap.cs:44)
+}</args></log4net.Error>
+2022-06-08 02:57:57,487 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-08 02:57:57,497 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-08 02:58:02,998 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-08 02:58:02,999 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-06-08 00:16:47,222 [ 1] INFO  Unity: Character_10_辅导费 OnDestroy :ID:2 POS:(5000, 4000, -1069) DIR:(100, 0, 0) SPD:0 
-2022-06-08 00:16:47,223 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-06-08 00:16:47,223 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-06-08 02:58:03,000 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-08 02:58:03,001 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-06-08 00:16:47,224 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-06-08 00:16:47,225 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-06-08 02:58:03,001 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-08 02:58:03,002 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-06-08 02:58:03,004 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-08 02:58:03,004 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

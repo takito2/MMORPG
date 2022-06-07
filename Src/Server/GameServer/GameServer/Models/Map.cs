@@ -7,7 +7,7 @@ using SkillBridge.Message;
 
 using Common;
 using Common.Data;
-
+using GameServer.Services;
 using Network;
 using GameServer.Managers;
 using GameServer.Entities;
@@ -45,6 +45,7 @@ namespace GameServer.Models
         internal void Update()
         {
         }
+
 
         /// <summary>
         /// 角色进入地图
@@ -110,6 +111,23 @@ namespace GameServer.Models
 
             byte[] data = PackageHandler.PackMessage(message);
             connection.SendData(data, 0, data.Length);
+        }
+
+        internal void UpdateEntity(NEntitySync entity)
+        {
+            foreach (var kv in this.MapCharacters)
+            {
+                if (kv.Value.character.entityId == entity.Id)
+                {
+                    kv.Value.character.Position = entity.Entity.Position;
+                    kv.Value.character.Direction = entity.Entity.Direction;
+                    kv.Value.character.Speed = entity.Entity.Speed;
+                }
+                else
+                {
+                    MapService.Instance.SendEntityUpdate(kv.Value.connection,entity);//发送自身同步信息给其他玩家
+                }
+            }
         }
     }
 }

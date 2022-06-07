@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using Managers;
 
 namespace Services
 {
@@ -106,9 +107,18 @@ namespace Services
 
         }
 
-        private void OnMapEntitySync(object sender, MapEntitySyncResponse message)
+        private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
         {
-            throw new NotImplementedException();
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.AppendFormat("MapEntityUpdateResponse : Entity:{0}",response.entitySyncs.Count);
+            sb.AppendLine();
+            foreach (var entity in response.entitySyncs)
+            {
+                EntityManager.Instance.OnEntitySync(entity);
+                sb.AppendFormat("   [{0}]evt:{1} entity:{2}",entity.Id,entity.Event,entity.Entity.String());
+                sb.AppendLine();
+            }
+            Debug.Log(sb.ToString());
         }
     }
 }

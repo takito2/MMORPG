@@ -51,8 +51,8 @@ public class PlayerInputController : MonoBehaviour {
             return;
 
         
-        float v = Input.GetAxis("Vertical");
-        if (v > 0.01)
+        float v = Input.GetAxisRaw("Vertical");//test
+        if (v > 0.1)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
             {
@@ -62,7 +62,7 @@ public class PlayerInputController : MonoBehaviour {
             }
             this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
         }
-        else if (v < -0.01)
+        else if (v < -0.1)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
             {
