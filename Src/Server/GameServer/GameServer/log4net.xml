@@ -17,7 +17,7 @@
     </appender>
     <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
       <!--定义文件存放位置-->
-      <file value="Log\\log.log" />
+      <file value="Log\\" />
       <appendToFile value="true" />
       <rollingStyle value="Date" />
       <datePattern value="yyyyMMdd'.txt'" />

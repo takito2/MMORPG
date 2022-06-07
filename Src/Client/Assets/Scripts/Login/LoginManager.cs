@@ -20,7 +20,7 @@ public class LoginManager : MonoBehaviour {
 
     // Use this for initialization
     IEnumerator Start () {
-        //log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.xml"));//日志
+        log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.xml"));//日志
         UnityLogger.Init();
         Common.Log.Init("Unity");
         Common.Log.Info("LoadingManager start");

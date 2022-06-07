@@ -1,0 +1,212 @@
+2022-06-07 10:25:14,509 [ 1] INFO  Unity: LoadingManager start
+2022-06-07 10:25:19,131 [ 1] INFO  Unity: DataManager > DataManager()
+2022-06-07 10:25:19,366 [ 1] INFO  Unity: Client UserService Init
+2022-06-07 10:25:19,371 [ 1] INFO  Unity: Client UserService Init
+2022-06-07 10:25:25,573 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
+2022-06-07 10:25:25,577 [ 1] INFO  Unity: ConnectToServer() Start
+2022-06-07 10:25:25,580 [ 1] INFO  Unity: DoConnect
+2022-06-07 10:25:25,584 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-06-07 10:25:25,588 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-06-07 10:25:40,146 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-06-07 10:25:40,150 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-07 10:25:40,536 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:25:40,550 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-07 10:25:46,442 [ 1] INFO  Unity: Select Char:[14]海蒂诗[Warrior]
+2022-06-07 10:25:47,106 [ 1] INFO  Unity: UserGameEnterRequest::characterId :5
+2022-06-07 10:25:47,219 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-06-07 10:25:47,253 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1
+2022-06-07 10:25:47,260 [ 1] INFO  Unity: AddCharacter:14:海蒂诗 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-07 10:25:47,266 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-06-07 10:25:48,634 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:25:48,635 [ 1] INFO  Unity: UIMInimap Init
+2022-06-07 10:25:48,646 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-06-07 10:25:54,844 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-07 10:25:54,848 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-06-07 10:25:55,071 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:14,CurrentCharacter:14
+2022-06-07 10:25:55,077 [ 1] INFO  Unity: 自己离开：response.characterId：14，User.Instance.CurrentCharacter.Id：14
+2022-06-07 10:25:55,089 [ 1] INFO  Unity: RemoveCharacter:14
+2022-06-07 10:25:55,101 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-06-07 10:25:55,103 [ 1] INFO  Unity: Character_14_海蒂诗 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2022-06-07 10:25:55,201 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:25:55,215 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-07 10:26:01,945 [ 1] INFO  Unity: Select Char:[10]辅导费[Archer]
+2022-06-07 10:26:02,793 [ 1] INFO  Unity: UserGameEnterRequest::characterId :2
+2022-06-07 10:26:02,830 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-06-07 10:26:02,836 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1
+2022-06-07 10:26:02,843 [ 1] INFO  Unity: AddCharacter:10:辅导费 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-07 10:26:02,851 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at GameObjectManager.InitGameObject (UnityEngine.GameObject go, Entities.Character character) [0x000b9] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:101 
+  at GameObjectManager.CreateCharacterObject (Entities.Character character) [0x00122] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:76 
+  at GameObjectManager.OnCharacterEnter (Entities.Character cha) [0x00003] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:37 
+  at Manager.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) [0x0007b] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\CharacterManager.cs:56 
+  at Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) [0x0007a] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Services\MapService.cs:49 
+  at (wrapper delegate-invoke) Network.MessageDistributer`1/MessageHandler`1<object, SkillBridge.Message.MapCharacterEnterResponse>:invoke_void__this___object_MapCharacterEnterResponse (object,SkillBridge.Message.MapCharacterEnterResponse)
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) [0x00044] in C:\Study\unity\myMMO\mmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
+2022-06-07 10:26:02,856 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, GameObjectManager.InitGameObject (UnityEngine.GameObject go, Entities.Character character) (at Assets/Scripts/Managers/GameObjectManager.cs:101)
+GameObjectManager.CreateCharacterObject (Entities.Character character) (at Assets/Scripts/Managers/GameObjectManager.cs:76)
+GameObjectManager.OnCharacterEnter (Entities.Character cha) (at Assets/Scripts/Managers/GameObjectManager.cs:37)
+Manager.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) (at Assets/Scripts/Managers/CharacterManager.cs:56)
+Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) (at Assets/Scripts/Services/MapService.cs:49)
+Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) (at C:/Study/unity/myMMO/mmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
+}</args></log4net.Error>
+2022-06-07 10:26:03,140 [ 1] INFO  Unity: SetPosition:(5000, 4000, 768)
+2022-06-07 10:26:03,287 [ 1] INFO  Unity: SetPosition:(5000, 4000, 709)
+2022-06-07 10:26:03,397 [ 1] INFO  Unity: SetPosition:(5000, 4000, 657)
+2022-06-07 10:26:03,517 [ 1] INFO  Unity: SetPosition:(5000, 4000, 584)
+2022-06-07 10:26:03,620 [ 1] INFO  Unity: SetPosition:(5000, 4000, 511)
+2022-06-07 10:26:03,676 [ 1] INFO  Unity: SetPosition:(5000, 4000, 457)
+2022-06-07 10:26:03,751 [ 1] INFO  Unity: SetPosition:(5000, 4000, 399)
+2022-06-07 10:26:03,852 [ 1] INFO  Unity: SetPosition:(5000, 4000, 303)
+2022-06-07 10:26:03,940 [ 1] INFO  Unity: SetPosition:(5000, 4000, 215)
+2022-06-07 10:26:03,991 [ 1] INFO  Unity: SetPosition:(5000, 4000, 140)
+2022-06-07 10:26:04,037 [ 1] INFO  Unity: SetPosition:(5000, 4000, 81)
+2022-06-07 10:26:04,089 [ 1] INFO  Unity: SetPosition:(5000, 4000, 19)
+2022-06-07 10:26:04,171 [ 1] INFO  Unity: SetPosition:(5000, 4000, -89)
+2022-06-07 10:26:04,258 [ 1] INFO  Unity: SetPosition:(5000, 4000, -204)
+2022-06-07 10:26:04,319 [ 1] INFO  Unity: SetPosition:(5000, 4000, -276)
+2022-06-07 10:26:04,382 [ 1] INFO  Unity: SetPosition:(5000, 4000, -376)
+2022-06-07 10:26:04,451 [ 1] INFO  Unity: SetPosition:(5000, 4000, -480)
+2022-06-07 10:26:04,502 [ 1] INFO  Unity: SetPosition:(5000, 4000, -589)
+2022-06-07 10:26:04,563 [ 1] INFO  Unity: SetPosition:(5000, 4000, -674)
+2022-06-07 10:26:04,615 [ 1] INFO  Unity: SetPosition:(5000, 4000, -761)
+2022-06-07 10:26:04,646 [ 1] INFO  Unity: SetPosition:(5000, 4000, -820)
+2022-06-07 10:26:04,676 [ 1] INFO  Unity: SetPosition:(5000, 4000, -881)
+2022-06-07 10:26:04,779 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1069)
+2022-06-07 10:26:04,810 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1133)
+2022-06-07 10:26:04,862 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1233)
+2022-06-07 10:26:04,907 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1335)
+2022-06-07 10:26:04,960 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1439)
+2022-06-07 10:26:04,994 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1510)
+2022-06-07 10:26:05,026 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1582)
+2022-06-07 10:26:05,058 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1655)
+2022-06-07 10:26:05,093 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1729)
+2022-06-07 10:26:05,126 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1804)
+2022-06-07 10:26:05,194 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1958)
+2022-06-07 10:26:05,257 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2116)
+2022-06-07 10:26:05,314 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2237)
+2022-06-07 10:26:05,372 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2403)
+2022-06-07 10:26:05,426 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2530)
+2022-06-07 10:26:05,488 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2660)
+2022-06-07 10:26:05,524 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2792)
+2022-06-07 10:26:05,566 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2882)
+2022-06-07 10:26:05,600 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2972)
+2022-06-07 10:26:05,668 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3157)
+2022-06-07 10:26:05,724 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3298)
+2022-06-07 10:26:05,743 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3393)
+2022-06-07 10:26:05,773 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3490)
+2022-06-07 10:26:06,584 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3786)
+2022-06-07 10:26:06,672 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4041)
+2022-06-07 10:26:06,745 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4249)
+2022-06-07 10:26:06,802 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4462)
+2022-06-07 10:26:06,875 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4679)
+2022-06-07 10:26:06,935 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4845)
+2022-06-07 10:26:06,992 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5070)
+2022-06-07 10:26:07,046 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5241)
+2022-06-07 10:26:07,104 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5474)
+2022-06-07 10:26:07,124 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5533)
+2022-06-07 10:26:07,160 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5651)
+2022-06-07 10:26:07,207 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5831)
+2022-06-07 10:26:07,297 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6136)
+2022-06-07 10:26:07,341 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6322)
+2022-06-07 10:26:07,367 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6385)
+2022-06-07 10:26:07,411 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6575)
+2022-06-07 10:26:07,485 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6831)
+2022-06-07 10:26:07,524 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7027)
+2022-06-07 10:26:07,558 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7158)
+2022-06-07 10:26:07,631 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7425)
+2022-06-07 10:26:07,680 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7627)
+2022-06-07 10:26:07,743 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7902)
+2022-06-07 10:26:07,840 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8321)
+2022-06-07 10:26:07,912 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8606)
+2022-06-07 10:26:07,972 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8896)
+2022-06-07 10:26:08,074 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9338)
+2022-06-07 10:26:08,164 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9714)
+2022-06-07 10:26:08,390 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10175)
+2022-06-07 10:26:08,470 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10566)
+2022-06-07 10:26:08,530 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10804)
+2022-06-07 10:26:08,593 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11125)
+2022-06-07 10:26:08,668 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11533)
+2022-06-07 10:26:08,723 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11781)
+2022-06-07 10:26:08,781 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12115)
+2022-06-07 10:26:08,836 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12368)
+2022-06-07 10:26:08,884 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12625)
+2022-06-07 10:26:08,907 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12710)
+2022-06-07 10:26:08,940 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12883)
+2022-06-07 10:26:08,980 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13057)
+2022-06-07 10:26:09,008 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13232)
+2022-06-07 10:26:09,035 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13408)
+2022-06-07 10:26:09,074 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13585)
+2022-06-07 10:26:09,119 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13852)
+2022-06-07 10:26:09,146 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13942)
+2022-06-07 10:26:09,198 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14213)
+2022-06-07 10:26:09,242 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14486)
+2022-06-07 10:26:09,291 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14762)
+2022-06-07 10:26:09,321 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14947)
+2022-06-07 10:26:09,357 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15133)
+2022-06-07 10:26:09,380 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15227)
+2022-06-07 10:26:09,420 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15415)
+2022-06-07 10:26:09,450 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15699)
+2022-06-07 10:26:09,495 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15890)
+2022-06-07 10:26:09,531 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16081)
+2022-06-07 10:26:09,571 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16371)
+2022-06-07 10:26:09,610 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16566)
+2022-06-07 10:26:09,653 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16859)
+2022-06-07 10:26:09,712 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17156)
+2022-06-07 10:26:09,755 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17455)
+2022-06-07 10:26:09,803 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17756)
+2022-06-07 10:26:09,852 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18059)
+2022-06-07 10:26:09,900 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18263)
+2022-06-07 10:26:09,967 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18674)
+2022-06-07 10:26:09,993 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18881)
+2022-06-07 10:26:10,023 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19090)
+2022-06-07 10:26:10,055 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19299)
+2022-06-07 10:26:10,082 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19404)
+2022-06-07 10:26:10,134 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19721)
+2022-06-07 10:26:10,198 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20147)
+2022-06-07 10:26:10,226 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20362)
+2022-06-07 10:26:10,256 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20578)
+2022-06-07 10:26:10,292 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20795)
+2022-06-07 10:26:10,318 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21013)
+2022-06-07 10:26:10,355 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21232)
+2022-06-07 10:26:10,451 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21784)
+2022-06-07 10:26:10,483 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22007)
+2022-06-07 10:26:10,525 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22344)
+2022-06-07 10:26:10,557 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22570)
+2022-06-07 10:26:10,596 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22796)
+2022-06-07 10:26:10,624 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23024)
+2022-06-07 10:26:10,647 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23139)
+2022-06-07 10:26:10,684 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23368)
+2022-06-07 10:26:10,716 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23599)
+2022-06-07 10:26:10,737 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23831)
+2022-06-07 10:26:10,763 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23947)
+2022-06-07 10:26:10,800 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24180)
+2022-06-07 10:26:10,832 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24415)
+2022-06-07 10:26:10,871 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24650)
+2022-06-07 10:26:10,909 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25006)
+2022-06-07 10:26:10,944 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25244)
+2022-06-07 10:26:10,970 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25483)
+2022-06-07 10:26:11,014 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25724)
+2022-06-07 10:26:11,060 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26087)
+2022-06-07 10:26:11,132 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26574)
+2022-06-07 10:26:11,153 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26697)
+2022-06-07 10:26:11,184 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26943)
+2022-06-07 10:26:11,340 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:26:11,343 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-06-07 10:26:11,345 [ 1] INFO  Unity: Character_10_辅导费 OnDestroy :ID:2 POS:(5000, 4000, -26943) DIR:(100, 0, 0) SPD:0 
+2022-06-07 10:26:11,347 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:26:11,348 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-06-07 10:26:11,352 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:26:11,352 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+

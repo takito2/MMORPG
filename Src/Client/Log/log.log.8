@@ -1,0 +1,60 @@
+2022-06-07 10:29:32,867 [ 1] INFO  Unity: LoadingManager start
+2022-06-07 10:29:37,221 [ 1] INFO  Unity: DataManager > DataManager()
+2022-06-07 10:29:37,427 [ 1] INFO  Unity: Client UserService Init
+2022-06-07 10:29:37,431 [ 1] INFO  Unity: Client UserService Init
+2022-06-07 10:29:44,211 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
+2022-06-07 10:29:44,213 [ 1] INFO  Unity: ConnectToServer() Start
+2022-06-07 10:29:44,215 [ 1] INFO  Unity: DoConnect
+2022-06-07 10:29:44,218 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-06-07 10:29:44,222 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-06-07 10:29:58,019 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-06-07 10:29:58,025 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-07 10:29:58,322 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:29:58,339 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-07 10:30:00,697 [ 1] INFO  Unity: Select Char:[12]放散[Wizard]
+2022-06-07 10:30:01,396 [ 1] INFO  Unity: UserGameEnterRequest::characterId :4
+2022-06-07 10:30:01,505 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-06-07 10:30:01,554 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1
+2022-06-07 10:30:01,558 [ 1] INFO  Unity: AddCharacter:12:放散 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-07 10:30:01,564 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-06-07 10:30:03,081 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:30:03,082 [ 1] INFO  Unity: UIMInimap Init
+2022-06-07 10:30:03,091 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-06-07 10:30:05,022 [ 1] INFO  Unity: SetDirection:(98, 19, 0)
+2022-06-07 10:30:05,133 [ 1] INFO  Unity: MoveForward
+2022-06-07 10:30:05,154 [ 1] INFO  Unity: SetDirection:(93, 38, 0)
+2022-06-07 10:30:05,259 [ 1] INFO  Unity: SetDirection:(84, 54, 0)
+2022-06-07 10:30:05,891 [ 1] INFO  Unity: Stop
+2022-06-07 10:30:12,198 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-07 10:30:12,205 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-06-07 10:30:12,555 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:12,CurrentCharacter:12
+2022-06-07 10:30:12,559 [ 1] INFO  Unity: 自己离开：response.characterId：12，User.Instance.CurrentCharacter.Id：12
+2022-06-07 10:30:12,564 [ 1] INFO  Unity: RemoveCharacter:12
+2022-06-07 10:30:12,570 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-06-07 10:30:12,572 [ 1] INFO  Unity: Character_12_放散 OnDestroy :ID:1 POS:(5203, 4129, 820) DIR:(84, 54, 0) SPD:0 
+2022-06-07 10:30:12,613 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'Transform' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UnityEngine.Transform.get_position ()
+UIMinimap.Update () (at Assets/Scripts/UI/Minimap/UIMinimap.cs:44)
+}</args></log4net.Error>
+2022-06-07 10:30:12,735 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:30:12,750 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-07 10:30:19,502 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:30:19,504 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-06-07 10:30:19,506 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:30:19,507 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-06-07 10:30:19,512 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:30:19,513 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+

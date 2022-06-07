@@ -1,0 +1,81 @@
+2022-06-07 10:28:28,643 [ 1] INFO  Unity: LoadingManager start
+2022-06-07 10:28:32,985 [ 1] INFO  Unity: DataManager > DataManager()
+2022-06-07 10:28:33,356 [ 1] INFO  Unity: Client UserService Init
+2022-06-07 10:28:33,359 [ 1] INFO  Unity: Client UserService Init
+2022-06-07 10:28:41,916 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
+2022-06-07 10:28:41,919 [ 1] INFO  Unity: ConnectToServer() Start
+2022-06-07 10:28:41,921 [ 1] INFO  Unity: DoConnect
+2022-06-07 10:28:41,924 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-06-07 10:28:41,928 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-06-07 10:28:42,168 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-06-07 10:28:42,173 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-07 10:28:42,518 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:28:42,535 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-07 10:28:43,502 [ 1] INFO  Unity: Select Char:[9]大萨达[Wizard]
+2022-06-07 10:28:44,660 [ 1] INFO  Unity: Select Char:[14]海蒂诗[Warrior]
+2022-06-07 10:28:45,077 [ 1] INFO  Unity: Select Char:[12]放散[Wizard]
+2022-06-07 10:28:45,890 [ 1] INFO  Unity: UserGameEnterRequest::characterId :4
+2022-06-07 10:28:45,970 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-06-07 10:28:45,976 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:2
+2022-06-07 10:28:45,981 [ 1] INFO  Unity: AddCharacter:12:放散 Map:1 Entity:(3:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-07 10:28:45,986 [ 1] INFO  Unity: AddCharacter:10:辅导费 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-07 10:28:45,989 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-06-07 10:28:47,340 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:28:47,342 [ 1] INFO  Unity: UIMInimap Init
+2022-06-07 10:28:47,351 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-06-07 10:28:51,640 [ 1] INFO  Unity: MoveForward
+2022-06-07 10:28:52,497 [ 1] INFO  Unity: Stop
+2022-06-07 10:28:53,017 [ 1] INFO  Unity: MoveBack
+2022-06-07 10:28:53,201 [ 1] INFO  Unity: Stop
+2022-06-07 10:28:54,504 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
+2022-06-07 10:28:54,610 [ 1] INFO  Unity: SetDirection:(92, -39, 0)
+2022-06-07 10:28:54,707 [ 1] INFO  Unity: SetDirection:(82, -57, 0)
+2022-06-07 10:28:54,843 [ 1] INFO  Unity: SetDirection:(71, -71, 0)
+2022-06-07 10:28:55,136 [ 1] INFO  Unity: SetDirection:(57, -82, 0)
+2022-06-07 10:28:55,265 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
+2022-06-07 10:28:55,413 [ 1] INFO  Unity: SetDirection:(23, -97, 0)
+2022-06-07 10:28:56,294 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-06-07 10:28:56,305 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-06-07 10:28:56,569 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:12,CurrentCharacter:12
+2022-06-07 10:28:56,574 [ 1] INFO  Unity: 自己离开：response.characterId：12，User.Instance.CurrentCharacter.Id：12
+2022-06-07 10:28:56,580 [ 1] INFO  Unity: RemoveCharacter:12
+2022-06-07 10:28:56,585 [ 1] INFO  Unity: RemoveCharacter:10
+2022-06-07 10:28:56,587 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-06-07 10:28:56,589 [ 1] INFO  Unity: Character_12_放散 OnDestroy :ID:3 POS:(5215, 4000, 820) DIR:(23, -97, 0) SPD:0 
+2022-06-07 10:28:56,590 [ 1] INFO  Unity: Character_10_辅导费 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2022-06-07 10:28:56,643 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'Transform' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UnityEngine.Transform.get_position ()
+UIMinimap.Update () (at Assets/Scripts/UI/Minimap/UIMinimap.cs:44)
+}</args></log4net.Error>
+2022-06-07 10:28:56,696 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'Transform' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UnityEngine.Transform.get_position ()
+UIMinimap.Update () (at Assets/Scripts/UI/Minimap/UIMinimap.cs:44)
+}</args></log4net.Error>
+2022-06-07 10:28:56,779 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{MissingReferenceException: The object of type 'Transform' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object., UnityEngine.Transform.get_position ()
+UIMinimap.Update () (at Assets/Scripts/UI/Minimap/UIMinimap.cs:44)
+}</args></log4net.Error>
+2022-06-07 10:28:56,937 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-07 10:28:56,952 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-06-07 10:29:10,786 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:29:10,788 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-06-07 10:29:10,789 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:29:10,791 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-06-07 10:29:10,793 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-07 10:29:10,794 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+

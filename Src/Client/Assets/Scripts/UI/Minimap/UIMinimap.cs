@@ -14,16 +14,17 @@ public class UIMinimap : MonoSingleton<UIMinimap> {
 
     private Transform playerTransform;
 
-	// Use this for initialization
-	//void Start () {
- //       Debug.Log("UIMInimap Init");
- //       //this.InitMap();
-	//}
-
-    protected override void OnStart()
+    // Use this for initialization
+    void Start()
     {
-        base.OnStart();
+        Debug.Log("UIMInimap Init");
+        this.InitMap();
     }
+
+    //protected override void OnStart()
+    //{
+    //    base.OnStart();
+    //}
 
     public void InitMap()
     {

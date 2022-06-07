@@ -39,12 +39,12 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
     void OnCharacterLeave(Character cha)
     {
-        if (!Characters.ContainsKey(cha.entityId))
+        if (!Characters.ContainsKey(cha.Info.Id))
             return;
-        if (Characters[cha.entityId] != null)
+        if (Characters[cha.Info.Id] != null)
         {
-            Destroy(Characters[cha.entityId]);
-            this.Characters.Remove(cha.entityId);
+            Destroy(Characters[cha.Info.Id]);
+            this.Characters.Remove(cha.Info.Id);
         }
     }
 
@@ -59,21 +59,21 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
     private void CreateCharacterObject(Character character)
     {
-        if (!Characters.ContainsKey(character.entityId) || Characters[character.entityId] == null)
+        if (!Characters.ContainsKey(character.Info.Id) || Characters[character.Info.Id] == null)
         {
             Object obj = Resloader.Load<Object>(character.Define.Resource);
             if (obj == null)
             {
-                Debug.LogErrorFormat("Character[{0}] Resource[{1}] not existed.", character.Define.TID, character.Define.Resource);
+                Debug.LogErrorFormat("Character[{0}] Resource[{1}] not existed.", character.Define.TID , character.Define.Resource);
                 return;
             }
             GameObject go = (GameObject)Instantiate(obj, this.transform);
             go.name = "Character_" + character.Info.Id + "_" + character.Name;
-            Characters[character.entityId] = go;
+            Characters[character.Info.Id] = go;
 
             UIWorldElementManager.Instance.AddCharacterNameBar(go.transform, character);
         }
-        this.InitGameObject(Characters[character.entityId], character);
+        this.InitGameObject(Characters[character.Info.Id], character);
     }
 
     private void InitGameObject(GameObject go, Character character)
@@ -98,7 +98,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
                 pc.enabled = true;
                 pc.character = character;
                 pc.entityController = ec;
-                UIMinimap.Instance.InitMap();
+                //UIMinimap.Instance.InitMap();
             }
             else
             {

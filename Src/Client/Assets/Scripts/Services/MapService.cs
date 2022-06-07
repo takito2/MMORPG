@@ -20,7 +20,10 @@ namespace Services
         {
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);//订阅回发消息
             MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+            MessageDistributer.Instance.Subscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
         }
+
+
 
         //public int CurrentMapId { get; private set; }
 
@@ -39,7 +42,7 @@ namespace Services
 
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
         {
-            Debug.LogFormat("OnMapCharacterEnter:Map:{0},Count:{1}", response.mapId, response.Characters.Count);
+            Debug.LogFormat("OnMapCharacterEnter:Map:{0},Count:{1},CurrentMapId:{2}", response.mapId, response.Characters.Count, CurrentMapId);
             foreach (var cha in response.Characters)
             {
                 if (User.Instance.CurrentCharacter.Id == cha.Id)
@@ -59,15 +62,15 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnMapCharacterLeave: CharID:{0}",response.characterId);
+            Debug.LogFormat("OnMapCharacterLeave: CharID:{0},CurrentCharacter:{1}", response.characterId, User.Instance.CurrentCharacter.Id);
             if (response.characterId != User.Instance.CurrentCharacter.Id)
             {
-                Debug.Log("其他角色离开");
+                Debug.LogFormat("别人离开：response.characterId：{0}，User.Instance.CurrentCharacter.Id：{1}",response.characterId, User.Instance.CurrentCharacter.Id);
                 CharacterManager.Instance.RemoveCharacter(response.characterId);
             }               
             else
             {
-                Debug.Log("自己离开");
+                Debug.LogFormat("自己离开：response.characterId：{0}，User.Instance.CurrentCharacter.Id：{1}", response.characterId, User.Instance.CurrentCharacter.Id);
                 CharacterManager.Instance.Clear();
             }
                 
@@ -79,13 +82,33 @@ namespace Services
             if (DataManager.Instance.Maps.ContainsKey(mapId))
             {
                 MapDefine map = DataManager.Instance.Maps[mapId];
-                Debug.Log("赋值当前地图对象");
                 User.Instance.CurrentMapData = map;
                 SceneManager.Instance.LoadScene(map.Resource);               
 
             }
             else
                 Debug.LogErrorFormat("EnterMap:Map:{0} not existed",mapId);
+        }
+
+        public void SendMapEntitySync(EntityEvent entityEvent, NEntity entity)
+        {
+            Debug.LogFormat("MapEntityUpdateRequest :ID:{0} POS:{1} DIR:{2} SPD:{3}",entity.Id,entity.Position.String(),entity.Direction.String(),entity.Speed);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapEntitySync = new MapEntitySyncRequest();
+            message.Request.mapEntitySync.entitySync = new NEntitySync()
+            {
+                Id = entity.Id,
+                Event = entityEvent,
+                Entity = entity             
+            };
+            NetClient.Instance.SendMessage(message);
+
+        }
+
+        private void OnMapEntitySync(object sender, MapEntitySyncResponse message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

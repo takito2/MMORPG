@@ -78,11 +78,13 @@ namespace GameServer.Models
         internal void CharacterLeave(NetConnection<NetSession> sender, Character cha)
         {
             Log.InfoFormat("CharacterLeave: Map:{0} characterId: {1}", this.Define.ID, cha.Id);
-            this.MapCharacters.Remove(cha.Id);
+
+            //this.MapCharacters.Remove(cha.Info.Id);
             foreach (var kv in this.MapCharacters)
             {
                 this.SendCharacterLeaveMap(kv.Value.connection, cha);
             }
+            this.MapCharacters.Remove(cha.Info.Id);//test
         }
 
         void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
@@ -100,6 +102,7 @@ namespace GameServer.Models
 
         void SendCharacterLeaveMap(NetConnection<NetSession> connection, Character character)
         {
+            Log.InfoFormat("SendCharacterLeaveMap:id:{0}", character.Info.Id);
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
