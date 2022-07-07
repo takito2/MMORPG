@@ -1,6 +1,6 @@
 ﻿using Common;
 using Common.Data;
-using Manager;
+using Managers;
 using Models;
 using Network;
 using SkillBridge.Message;
@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using Managers;
 
 namespace Services
 {
@@ -46,7 +45,7 @@ namespace Services
             Debug.LogFormat("OnMapCharacterEnter:Map:{0},Count:{1},CurrentMapId:{2}", response.mapId, response.Characters.Count, CurrentMapId);
             foreach (var cha in response.Characters)
             {
-                if (User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
                 {//当前角色切换地图
                     User.Instance.CurrentCharacter = cha;//刷新本地数据
                 }
@@ -59,19 +58,19 @@ namespace Services
                 this.CurrentMapId = response.mapId;
             }
         }
-       
+
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
             Debug.LogFormat("OnMapCharacterLeave: CharID:{0},CurrentCharacter:{1}", response.characterId, User.Instance.CurrentCharacter.Id);
-            if (response.characterId != User.Instance.CurrentCharacter.Id)
+            if (response.characterId != User.Instance.CurrentCharacter.Id)//因为CurrentCharacter内无存储entityid字段，故暂时使用数据库ID判断
             {
-                Debug.LogFormat("别人离开：response.characterId：{0}，User.Instance.CurrentCharacter.Id：{1}",response.characterId, User.Instance.CurrentCharacter.Id);
+                Debug.LogFormat("别人离开：response.characterId：{0}，User.Instance.CurrentCharacter.Entity.Id：{1}", response.characterId, User.Instance.CurrentCharacter.Id);
                 CharacterManager.Instance.RemoveCharacter(response.characterId);
             }               
             else
             {
-                Debug.LogFormat("自己离开：response.characterId：{0}，User.Instance.CurrentCharacter.Id：{1}", response.characterId, User.Instance.CurrentCharacter.Id);
+                Debug.LogFormat("自己离开：response.characterId：{0}，User.Instance.CurrentCharacter.Entity.Id：{1}", response.characterId, User.Instance.CurrentCharacter.Id);
                 CharacterManager.Instance.Clear();
             }
                 
@@ -119,6 +118,16 @@ namespace Services
                 sb.AppendLine();
             }
             Debug.Log(sb.ToString());
+        }
+
+        public void SendMapTeleport(int teleporterID)//地图传送
+        {
+            Debug.LogFormat("MapTeleportRequest:teleporterID:{0}",teleporterID);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapTeleport = new MapTeleportRequest();
+            message.Request.mapTeleport.teleporterId = teleporterID;
+            NetClient.Instance.SendMessage(message);
         }
     }
 }

@@ -36,6 +36,7 @@ namespace GameServer.Managers
             Log.InfoFormat("AddCharacter:cha:{0}",cha.ID);
             Character character = new Character(CharacterType.Player, cha);//将DB对象转变为实体对象，Tcharacter ——》character
             EntityManager.Instance.AddEntity(cha.MapID, character);
+            //character.Info.Id = character.Id;//将entityid同步到网络层
             this.Characters[cha.ID] = character;
             return character;
         }

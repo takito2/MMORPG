@@ -11,7 +11,7 @@ using Entities;
 using SkillBridge.Message;
 using Managers;
 
-namespace Manager
+namespace Managers
 {
     class CharacterManager : Singleton<CharacterManager>, IDisposable
     {

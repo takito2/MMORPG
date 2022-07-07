@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Managers;
 
-public class UIMinimap : MonoSingleton<UIMinimap> {
+public class UIMinimap : MonoBehaviour{
 
     public Collider minimapBoudingBox;
     public Image miniMap;
@@ -17,8 +17,9 @@ public class UIMinimap : MonoSingleton<UIMinimap> {
     // Use this for initialization
     void Start()
     {
+        MinimapManager.Instance.minimap = this;
         Debug.Log("UIMInimap Init");
-        this.InitMap();
+        this.UpdateMap();
     }
 
     //protected override void OnStart()
@@ -26,18 +27,24 @@ public class UIMinimap : MonoSingleton<UIMinimap> {
     //    base.OnStart();
     //}
 
-    public void InitMap()
+    public void UpdateMap()
     {
         this.miniName.text = User.Instance.CurrentMapData.Name;
-        if(this.miniMap.overrideSprite == null)
         this.miniMap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
         this.miniMap.SetNativeSize();
         this.miniMap.transform.localPosition = Vector3.zero;
-        this.playerTransform = User.Instance.CurrentCharacterObject.transform;
+        this.minimapBoudingBox = MinimapManager.Instance.MinimapBoundingBox;
+        this.playerTransform = null;
+        //this.playerTransform = User.Instance.CurrentCharacterObject.transform;
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (playerTransform == null)
+        {
+            playerTransform = MinimapManager.Instance.PlayerTransform;
+        }
+        if (minimapBoudingBox == null || playerTransform == null) return;
         float realWidth = minimapBoudingBox.bounds.size.x;
         float realHeight = minimapBoudingBox.bounds.size.z;
 

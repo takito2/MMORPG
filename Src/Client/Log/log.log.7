@@ -1,99 +1,83 @@
-2022-06-08 00:12:35,624 [ 1] INFO  Unity: LoadingManager start
-2022-06-08 00:12:39,797 [ 1] INFO  Unity: DataManager > DataManager()
-2022-06-08 00:12:39,892 [ 1] INFO  Unity: Client UserService Init
-2022-06-08 00:12:39,894 [ 1] INFO  Unity: Client UserService Init
-2022-06-08 00:12:52,282 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
-2022-06-08 00:12:52,284 [ 1] INFO  Unity: ConnectToServer() Start
-2022-06-08 00:12:52,285 [ 1] INFO  Unity: DoConnect
-2022-06-08 00:12:52,287 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-06-08 00:12:52,290 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-07-06 01:23:59,157 [ 1] INFO  Unity: LoadingManager start
+2022-07-06 01:24:03,559 [ 1] INFO  Unity: DataManager > DataManager()
+2022-07-06 01:24:03,683 [ 1] INFO  Unity: Client UserService Init
+2022-07-06 01:24:03,685 [ 1] INFO  Unity: Client UserService Init
+2022-07-06 01:24:09,533 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
+2022-07-06 01:24:09,535 [ 1] INFO  Unity: ConnectToServer() Start
+2022-07-06 01:24:09,536 [ 1] INFO  Unity: DoConnect
+2022-07-06 01:24:09,539 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-07-06 01:24:09,541 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-06-08 00:12:55,095 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-06-08 00:12:55,106 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-06-08 00:12:55,248 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-06-08 00:12:55,258 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-06-08 00:12:56,754 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2022-06-08 00:12:56,776 [ 1] INFO  Unity: OnGameEnter:Success,[None]
-2022-06-08 00:12:56,785 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
-2022-06-08 00:12:56,788 [ 1] INFO  Unity: AddCharacter:8:箭 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-06-08 00:12:56,791 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-06-08 00:12:57,295 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-06-08 00:12:57,296 [ 1] INFO  Unity: UIMInimap Init
-2022-06-08 00:12:57,302 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
-2022-06-08 00:12:58,281 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-06-08 00:12:58,284 [ 1] INFO  Unity: UserGameLeaveRequest
-2022-06-08 00:12:58,352 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:8,CurrentCharacter:8
-2022-06-08 00:12:58,354 [ 1] INFO  Unity: 自己离开：response.characterId：8，User.Instance.CurrentCharacter.Id：8
-2022-06-08 00:12:58,356 [ 1] INFO  Unity: RemoveCharacter:8
-2022-06-08 00:12:58,360 [ 1] INFO  Unity: OnGameLeave:Success [None]
-2022-06-08 00:12:58,361 [ 1] INFO  Unity: Character_8_箭 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2022-06-08 00:12:58,382 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-06-08 00:12:58,388 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-06-08 00:13:24,693 [ 1] INFO  Unity: Select Char:[10]辅导费[Archer]
-2022-06-08 00:13:25,433 [ 1] INFO  Unity: UserGameEnterRequest::characterId :2
-2022-06-08 00:13:25,456 [ 1] INFO  Unity: OnGameEnter:Success,[None]
-2022-06-08 00:13:27,041 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
-2022-06-08 00:13:27,042 [ 1] INFO  Unity: AddCharacter:10:辅导费 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-06-08 00:16:45,037 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at GameObjectManager.InitGameObject (UnityEngine.GameObject go, Entities.Character character) [0x000b9] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:101 
-  at GameObjectManager.CreateCharacterObject (Entities.Character character) [0x00122] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:76 
-  at GameObjectManager.OnCharacterEnter (Entities.Character cha) [0x00003] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\GameObjectManager.cs:37 
-  at Manager.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) [0x0007b] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Managers\CharacterManager.cs:56 
-  at Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) [0x00088] in C:\Study\unity\myMMO\mmorpg\Src\Client\Assets\Scripts\Services\MapService.cs:49 
-  at (wrapper delegate-invoke) Network.MessageDistributer`1/MessageHandler`1<object, SkillBridge.Message.MapCharacterEnterResponse>:invoke_void__this___object_MapCharacterEnterResponse (object,SkillBridge.Message.MapCharacterEnterResponse)
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) [0x00044] in C:\Study\unity\myMMO\mmorpg\Src\Lib\Common\Network\MessageDistributer.cs:105 
-2022-06-08 00:16:45,039 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, GameObjectManager.InitGameObject (UnityEngine.GameObject go, Entities.Character character) (at Assets/Scripts/Managers/GameObjectManager.cs:101)
-GameObjectManager.CreateCharacterObject (Entities.Character character) (at Assets/Scripts/Managers/GameObjectManager.cs:76)
-GameObjectManager.OnCharacterEnter (Entities.Character cha) (at Assets/Scripts/Managers/GameObjectManager.cs:37)
-Manager.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) (at Assets/Scripts/Managers/CharacterManager.cs:56)
-Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) (at Assets/Scripts/Services/MapService.cs:49)
-Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) (at C:/Study/unity/myMMO/mmorpg/Src/Lib/Common/Network/MessageDistributer.cs:105)
-}</args></log4net.Error>
-2022-06-08 00:16:45,540 [ 1] INFO  Unity: SetPosition:(5000, 4000, 768)
-2022-06-08 00:16:45,699 [ 1] INFO  Unity: SetPosition:(5000, 4000, 709)
-2022-06-08 00:16:45,815 [ 1] INFO  Unity: SetPosition:(5000, 4000, 648)
-2022-06-08 00:16:45,895 [ 1] INFO  Unity: SetPosition:(5000, 4000, 596)
-2022-06-08 00:16:45,973 [ 1] INFO  Unity: SetPosition:(5000, 4000, 537)
-2022-06-08 00:16:46,044 [ 1] INFO  Unity: SetPosition:(5000, 4000, 485)
-2022-06-08 00:16:46,106 [ 1] INFO  Unity: SetPosition:(5000, 4000, 428)
-2022-06-08 00:16:46,170 [ 1] INFO  Unity: SetPosition:(5000, 4000, 368)
-2022-06-08 00:16:46,329 [ 1] INFO  Unity: SetPosition:(5000, 4000, 215)
-2022-06-08 00:16:46,376 [ 1] INFO  Unity: SetPosition:(5000, 4000, 159)
-2022-06-08 00:16:46,425 [ 1] INFO  Unity: SetPosition:(5000, 4000, 101)
-2022-06-08 00:16:46,475 [ 1] INFO  Unity: SetPosition:(5000, 4000, 40)
-2022-06-08 00:16:46,527 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23)
-2022-06-08 00:16:46,572 [ 1] INFO  Unity: SetPosition:(5000, 4000, -89)
-2022-06-08 00:16:46,621 [ 1] INFO  Unity: SetPosition:(5000, 4000, -157)
-2022-06-08 00:16:46,676 [ 1] INFO  Unity: SetPosition:(5000, 4000, -227)
-2022-06-08 00:16:46,721 [ 1] INFO  Unity: SetPosition:(5000, 4000, -300)
-2022-06-08 00:16:46,777 [ 1] INFO  Unity: SetPosition:(5000, 4000, -376)
-2022-06-08 00:16:46,804 [ 1] INFO  Unity: SetPosition:(5000, 4000, -428)
-2022-06-08 00:16:46,838 [ 1] INFO  Unity: SetPosition:(5000, 4000, -480)
-2022-06-08 00:16:46,872 [ 1] INFO  Unity: SetPosition:(5000, 4000, -534)
-2022-06-08 00:16:46,908 [ 1] INFO  Unity: SetPosition:(5000, 4000, -589)
-2022-06-08 00:16:46,944 [ 1] INFO  Unity: SetPosition:(5000, 4000, -645)
-2022-06-08 00:16:46,976 [ 1] INFO  Unity: SetPosition:(5000, 4000, -703)
-2022-06-08 00:16:47,011 [ 1] INFO  Unity: SetPosition:(5000, 4000, -761)
-2022-06-08 00:16:47,044 [ 1] INFO  Unity: SetPosition:(5000, 4000, -820)
-2022-06-08 00:16:47,071 [ 1] INFO  Unity: SetPosition:(5000, 4000, -881)
-2022-06-08 00:16:47,106 [ 1] INFO  Unity: SetPosition:(5000, 4000, -942)
-2022-06-08 00:16:47,141 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1005)
-2022-06-08 00:16:47,177 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1069)
-2022-06-08 00:16:47,220 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-06-08 00:16:47,221 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-07-06 01:24:13,062 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-07-06 01:24:13,064 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-07-06 01:24:13,296 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-06 01:24:13,312 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-07-06 01:24:13,313 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
+2022-07-06 01:24:13,318 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-06 01:24:13,319 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-06-08 00:16:47,222 [ 1] INFO  Unity: Character_10_辅导费 OnDestroy :ID:2 POS:(5000, 4000, -1069) DIR:(100, 0, 0) SPD:0 
-2022-06-08 00:16:47,223 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-06-08 00:16:47,223 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-07-06 01:24:31,621 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2022-07-06 01:24:31,648 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-07-06 01:24:31,660 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
+2022-07-06 01:24:31,663 [ 1] INFO  Unity: AddCharacter:8:箭 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-07-06 01:24:31,666 [ 1] INFO  Unity: 增加实体：entity.Id：1
+2022-07-06 01:24:31,667 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-07-06 01:24:32,340 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-06 01:24:32,347 [ 1] INFO  Unity: UIMInimap Init
+2022-07-06 01:24:32,348 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-07-06 01:24:39,430 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-07-06 01:24:39,433 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-07-06 01:24:39,484 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:8,CurrentCharacter:8
+2022-07-06 01:24:39,486 [ 1] INFO  Unity: 自己离开：response.characterId：8，User.Instance.CurrentCharacter.Entity.Id：8
+2022-07-06 01:24:39,491 [ 1] INFO  Unity: RemoveCharacter:8
+2022-07-06 01:24:39,495 [ 1] INFO  Unity: 移除实体：entity.Id：1
+2022-07-06 01:24:39,506 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-07-06 01:24:39,510 [ 1] INFO  Unity: Character_8_箭 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2022-07-06 01:24:39,714 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-06 01:24:39,727 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-07-06 01:24:39,728 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
+2022-07-06 01:24:39,730 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-06 01:24:39,731 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-06-08 00:16:47,224 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-06-08 00:16:47,225 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-07-06 01:24:43,992 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2022-07-06 01:24:44,007 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-07-06 01:24:44,008 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
+2022-07-06 01:24:44,010 [ 1] INFO  Unity: AddCharacter:8:箭 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-07-06 01:24:44,012 [ 1] INFO  Unity: 增加实体：entity.Id：2
+2022-07-06 01:24:44,015 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-07-06 01:24:44,778 [ 1] INFO  Unity: SetPosition:(5000, 4000, 768)
+2022-07-06 01:24:44,781 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5000,4000,768) DIR:(100,0,0) SPD:0
+2022-07-06 01:24:44,908 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-06 01:24:44,909 [ 1] INFO  Unity: MonoSingleton:MainPlayerCamera (MainPlayerCamera)
+2022-07-06 01:24:44,910 [ 1] INFO  Unity: MonoSingleton:UIWorldElementManager (UIWorldElementManager)
+2022-07-06 01:24:44,910 [ 1] INFO  Unity: MonoSingleton:GameObjectManager (GameObjectManager)
+2022-07-06 01:24:44,912 [ 1] INFO  Unity: UIMInimap Init
+2022-07-06 01:24:44,912 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-07-06 01:25:02,340 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-07-06 01:25:02,344 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-07-06 01:25:02,358 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:8,CurrentCharacter:8
+2022-07-06 01:25:02,360 [ 1] INFO  Unity: 自己离开：response.characterId：8，User.Instance.CurrentCharacter.Entity.Id：8
+2022-07-06 01:25:02,361 [ 1] INFO  Unity: RemoveCharacter:8
+2022-07-06 01:25:02,362 [ 1] INFO  Unity: 移除实体：entity.Id：2
+2022-07-06 01:25:02,363 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-07-06 01:25:02,364 [ 1] INFO  Unity: Character_8_箭 OnDestroy :ID:2 POS:(5000, 4000, 768) DIR:(100, 0, 0) SPD:0 
+2022-07-06 01:25:02,525 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-06 01:25:02,535 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
+2022-07-06 01:25:02,536 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
+2022-07-06 01:25:02,538 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-06 01:25:02,538 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-07-06 01:25:04,172 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-06 01:25:04,172 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

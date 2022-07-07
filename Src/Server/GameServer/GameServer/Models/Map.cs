@@ -70,22 +70,22 @@ namespace GameServer.Models
                 this.SendCharacterEnterMap(kv.Value.connection, character.Info);
             }
             
-            this.MapCharacters[character.Info.Id] = new MapCharacter(conn, character);
-            Log.InfoFormat("CharacterEnter:id:{0}",character.Info.Id);
+            this.MapCharacters[character.entityId] = new MapCharacter(conn, character);
+            Log.InfoFormat("CharacterEnter:id:{0}",character.entityId);
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
         }
 
-        internal void CharacterLeave(NetConnection<NetSession> sender, Character cha)
+        internal void CharacterLeave(Character cha)
         {
-            Log.InfoFormat("CharacterLeave: Map:{0} characterId: {1}", this.Define.ID, cha.Id);
+            Log.InfoFormat("CharacterLeave: Map:{0} characterId: {1} entityId:{2}", this.Define.ID, cha.Id ,cha.entityId);
 
             //this.MapCharacters.Remove(cha.Info.Id);
             foreach (var kv in this.MapCharacters)
             {
                 this.SendCharacterLeaveMap(kv.Value.connection, cha);
             }
-            this.MapCharacters.Remove(cha.Info.Id);//test
+            this.MapCharacters.Remove(cha.entityId);//test
         }
 
         void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
@@ -103,11 +103,12 @@ namespace GameServer.Models
 
         void SendCharacterLeaveMap(NetConnection<NetSession> connection, Character character)
         {
-            Log.InfoFormat("SendCharacterLeaveMap:id:{0}", character.Info.Id);
+            Log.InfoFormat("SendCharacterLeaveMap:id:{0},{1}", character.entityId,character.EntityData.Id);
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
-            message.Response.mapCharacterLeave.characterId = character.Info.Id;
+            //message.Response.mapCharacterLeave.characterId = character.entityId;//根据entityId删除客户端角色
+            message.Response.mapCharacterLeave.characterId = character.Info.Id;//根据数据库Id删除客户端角色
 
             byte[] data = PackageHandler.PackMessage(message);
             connection.SendData(data, 0, data.Length);
@@ -119,13 +120,16 @@ namespace GameServer.Models
             {
                 if (kv.Value.character.entityId == entity.Id)
                 {
+                    //Log.InfoFormat("同步自身：{0}", entity.Id);
                     kv.Value.character.Position = entity.Entity.Position;
                     kv.Value.character.Direction = entity.Entity.Direction;
                     kv.Value.character.Speed = entity.Entity.Speed;
+                    Log.InfoFormat("Position:{0};Direction:{1};Speed:{2}.", kv.Value.character.Position, kv.Value.character.Direction, kv.Value.character.Speed);
                 }
                 else
                 {
                     MapService.Instance.SendEntityUpdate(kv.Value.connection,entity);//发送自身同步信息给其他玩家
+                    //Log.InfoFormat("发送位置给：{0}", kv.Value.connection.Session.Character.Data.Name);
                 }
             }
         }

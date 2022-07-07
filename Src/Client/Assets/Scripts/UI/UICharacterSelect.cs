@@ -135,7 +135,7 @@ public class UICharacterSelect : MonoBehaviour {
         this.selectCharacterIdx = idx;
         var cha = User.Instance.Info.Player.Characters[idx];
         Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
-        User.Instance.CurrentCharacter = cha;
+        //User.Instance.CurrentCharacter = cha;
         //characterView.CurrectCharacter = idx;
         characterView.CurrectCharacter = (System.Int32)cha.Class - 1;
 
