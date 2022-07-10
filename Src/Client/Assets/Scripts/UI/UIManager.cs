@@ -16,6 +16,7 @@ public class UIManager : Singleton<UIManager> {
 	public UIManager()//构造函数，包括初始化管理UI
     {
         UIResources.Add(typeof(UITest), new UIElement() {Resources = "UI/UITest",Cache = true });
+        UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/UIBag", Cache = true });
     }
 	
 	public T Show<T>()//泛型展示类

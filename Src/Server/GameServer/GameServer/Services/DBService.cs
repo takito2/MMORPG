@@ -21,5 +21,13 @@ namespace GameServer.Services
         {
             entities = new ExtremeWorldEntities();
         }
+
+        /// <summary>
+        /// 异步保存，调用立即返回无须等待处理结果，服务器慢慢处理
+        /// </summary>
+        public void Save()
+        {
+            entities.SaveChangesAsync();//异步保存
+        }
     }
 }

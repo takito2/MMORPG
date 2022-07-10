@@ -50,7 +50,7 @@ namespace GameServer.Services
                 DBService.Instance.Entities.Users.Add(new TUser() { Username = request.User, Password = request.Passward, Player = player });
                 DBService.Instance.Entities.SaveChanges();
                 message.Response.userRegister.Result = Result.Success;
-                message.Response.userRegister.Errormsg = "None";
+                message.Response.userRegister.Errormsg = "注册成功";
             }
 
             byte[] data = PackageHandler.PackMessage(message);
@@ -119,15 +119,24 @@ namespace GameServer.Services
                     MapPosY = 4000,
                     MapPosZ = 820,
                 };
-                character = DBService.Instance.Entities.Characters.Add(character);
-                sender.Session.User.Player.Characters.Add(character);
-                DBService.Instance.Entities.SaveChanges();
 
-                NetMessage message = new NetMessage();
-                message.Response = new NetMessageResponse();
-                message.Response.createChar = new UserCreateCharacterResponse();
-                message.Response.createChar.Result = Result.Success;
-                message.Response.createChar.Errormsg = "None";
+            //背包初始化
+            var bag = new TCharacterBag();
+            bag.Owner = character;
+            bag.Items = new byte[0];
+            bag.Unlocked = 20;
+            TCharacterItem it = new TCharacterItem();
+            character.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
+
+            character = DBService.Instance.Entities.Characters.Add(character);
+            sender.Session.User.Player.Characters.Add(character);
+            DBService.Instance.Entities.SaveChanges();
+
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.createChar = new UserCreateCharacterResponse();
+            message.Response.createChar.Result = Result.Success;
+            message.Response.createChar.Errormsg = "None";
 
             foreach (var c in sender.Session.User.Player.Characters)
             {
@@ -157,6 +166,29 @@ namespace GameServer.Services
             message.Response.gameEnter = new UserGameEnterResponse();
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None";
+
+            //返回初始角色信息
+            message.Response.gameEnter.Character = character.Info;//网络数据，返回包括道具信息Items
+
+            //道具系统测试用例
+            int itemId = 2;
+            bool hasItem = character.ItemManager.HasItem(itemId);
+            Log.InfoFormat("HasItem:[{0}],{1}",itemId,hasItem);
+            if (hasItem)
+            {
+                //character.ItemManager.RemoveItem(itemId, 1);
+            }
+            else
+            {
+                character.ItemManager.AddItem(1, 50);
+                character.ItemManager.AddItem(2, 38);
+                character.ItemManager.AddItem(3, 200);
+                character.ItemManager.AddItem(4, 300);
+            }
+            Models.Item item = character.ItemManager.GetItem(itemId);
+            Log.InfoFormat("Item:[{0}][{1}]",itemId,item);
+            DBService.Instance.Save();
+
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);

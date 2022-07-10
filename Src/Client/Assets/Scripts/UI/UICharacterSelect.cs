@@ -38,6 +38,7 @@ public class UICharacterSelect : MonoBehaviour {
         InitCharacterSelect(true);
         UserService.Instance.OnCharacterCreate = OnCharacterCreate;
         DataManager.Instance.Load();
+        if(User.Instance.Info.Player.Characters.Count > 0)
         OnSelectCharacter(0);
 
 

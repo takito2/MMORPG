@@ -8,6 +8,7 @@ using Network;
 using System;
 using UnityEngine;
 using Models;
+using Managers;
 
 namespace Services
 {
@@ -168,6 +169,7 @@ namespace Services
             {
                 this.OnRegister(response.Result, response.Errormsg);
             }
+            MessageBox.Show(response.Errormsg);
         }
 
         void OnUserLogin(object sender, UserLoginResponse response)
@@ -244,9 +246,13 @@ namespace Services
         {
             Debug.LogFormat("OnGameEnter:{0},[{1}]", response.Result, response.Errormsg);
 
-            if (response.Result == Result.Success)
+            if (response.Result == Result.Success)//进入游戏成功，接受回发的数据，初始化道具信息
             {
-
+                if (response.Character != null)
+                {
+                    ItemManager.Instance.Init(response.Character.Items);
+                    BagManager.Instance.Init(response.Character.Bag);
+                }
             }
         }
 

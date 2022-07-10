@@ -6,6 +6,7 @@ using System.IO;
 using SkillBridge.Message;
 using Services;
 using ProtoBuf;
+using Managers;
 
 public class LoginManager : MonoBehaviour {
 
@@ -38,6 +39,7 @@ public class LoginManager : MonoBehaviour {
         //Init basic services
         MapService.Instance.Init();
         UserService.Instance.Init();
+        
 
         for( float i = 50;i < 100;)
         {

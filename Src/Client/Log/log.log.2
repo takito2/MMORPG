@@ -1,57 +1,41 @@
-2022-07-07 17:10:02,153 [ 1] INFO  Unity: LoadingManager start
-2022-07-07 17:10:06,445 [ 1] INFO  Unity: DataManager > DataManager()
-2022-07-07 17:10:06,583 [ 1] INFO  Unity: Client UserService Init
-2022-07-07 17:10:06,585 [ 1] INFO  Unity: Client UserService Init
-2022-07-07 17:10:16,750 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
-2022-07-07 17:10:16,751 [ 1] INFO  Unity: ConnectToServer() Start
-2022-07-07 17:10:16,752 [ 1] INFO  Unity: DoConnect
-2022-07-07 17:10:16,754 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-07-07 17:10:16,757 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-07-10 15:19:16,254 [ 1] INFO  Unity: LoadingManager start
+2022-07-10 15:19:20,543 [ 1] INFO  Unity: DataManager > DataManager()
+2022-07-10 15:19:20,684 [ 1] INFO  Unity: Client UserService Init
+2022-07-10 15:19:20,686 [ 1] INFO  Unity: Client UserService Init
+2022-07-10 15:21:41,809 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
+2022-07-10 15:21:41,811 [ 1] INFO  Unity: ConnectToServer() Start
+2022-07-10 15:21:41,812 [ 1] INFO  Unity: DoConnect
+2022-07-10 15:21:41,814 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-07-10 15:21:41,816 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-07-07 17:10:20,314 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-07-07 17:10:20,316 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-07-07 17:10:20,562 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-07-07 17:10:20,578 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-07-07 17:10:20,580 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
-2022-07-07 17:10:20,584 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-07-07 17:10:20,585 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-07-10 15:21:41,910 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-07-10 15:21:41,920 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-07-10 15:21:42,068 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-10 15:21:42,079 [ 1] INFO  Unity: Select Char:[1]牛牛[Wizard]
+2022-07-10 15:21:42,081 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
+2022-07-10 15:21:42,082 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-10 15:21:42,083 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-07-07 17:10:22,033 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2022-07-07 17:10:22,065 [ 1] INFO  Unity: OnGameEnter:Success,[None]
-2022-07-07 17:10:22,067 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
-2022-07-07 17:10:22,069 [ 1] INFO  Unity: AddCharacter:8:箭 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-07-07 17:10:22,072 [ 1] INFO  Unity: 增加实体：entity.Id：1
-2022-07-07 17:10:22,074 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-07-07 17:10:22,882 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-07-07 17:10:22,884 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "DeliveryNPC1" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "DeliveryNPC1". Or your script needs to check if the component is attached before using it., UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NpcController.Start () (at Assets/Scripts/GameObject/NpcController.cs:24)
-}</args></log4net.Error>
-2022-07-07 17:10:22,891 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "taskNPC" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "taskNPC". Or your script needs to check if the component is attached before using it., UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NpcController.Start () (at Assets/Scripts/GameObject/NpcController.cs:24)
-}</args></log4net.Error>
-2022-07-07 17:10:22,893 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "DeliveryNPC2" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "DeliveryNPC2". Or your script needs to check if the component is attached before using it., UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NpcController.Start () (at Assets/Scripts/GameObject/NpcController.cs:24)
-}</args></log4net.Error>
-2022-07-07 17:10:22,894 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "Treasure_poter" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "Treasure_poter". Or your script needs to check if the component is attached before using it., UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NpcController.Start () (at Assets/Scripts/GameObject/NpcController.cs:24)
-}</args></log4net.Error>
-2022-07-07 17:10:22,901 [ 1] INFO  Unity: UIMInimap Init
-2022-07-07 17:10:22,903 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
-2022-07-07 17:10:30,891 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-07-07 17:10:30,892 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-07-10 15:21:42,912 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2022-07-10 15:21:42,931 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-07-10 15:21:42,933 [ 1] INFO  Unity: ItemManager:Init[Id:1,Count:50]
+2022-07-10 15:21:42,934 [ 1] INFO  Unity: ItemManager:Init[Id:2,Count:38]
+2022-07-10 15:21:42,935 [ 1] INFO  Unity: ItemManager:Init[Id:3,Count:200]
+2022-07-10 15:21:42,937 [ 1] INFO  Unity: ItemManager:Init[Id:4,Count:300]
+2022-07-10 15:21:42,939 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
+2022-07-10 15:21:42,942 [ 1] INFO  Unity: AddCharacter:1:牛牛 Map:1 Entity:(5:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-07-10 15:21:42,944 [ 1] INFO  Unity: 增加实体：entity.Id：5
+2022-07-10 15:21:42,946 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-07-10 15:21:43,819 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-10 15:21:43,829 [ 1] INFO  Unity: UIMInimap Init
+2022-07-10 15:21:43,830 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-07-10 15:23:54,470 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-10 15:23:54,471 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-07-07 17:10:30,893 [ 1] INFO  Unity: Character_8_箭 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2022-07-10 15:23:54,472 [ 1] INFO  Unity: Character_1_牛牛 OnDestroy :ID:5 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

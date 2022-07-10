@@ -34,7 +34,7 @@ namespace Managers
             return npc;
         }
 
-        public bool Interactive(NpcDefine npc)
+        public bool Interactive(NpcDefine npc)//根据NpcDefine进行交互，分类型交互
         {
             if (npc.Type == NpcType.Task)
             {
@@ -47,7 +47,7 @@ namespace Managers
             return false;
         }
 
-        public bool Interactive(int npcId)
+        public bool Interactive(int npcId)//根据ID进行交互
         {
             if (DataManager.Instance.NPCs.ContainsKey(npcId))
             {

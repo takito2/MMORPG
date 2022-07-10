@@ -1,84 +1,48 @@
-2022-07-06 01:23:59,157 [ 1] INFO  Unity: LoadingManager start
-2022-07-06 01:24:03,559 [ 1] INFO  Unity: DataManager > DataManager()
-2022-07-06 01:24:03,683 [ 1] INFO  Unity: Client UserService Init
-2022-07-06 01:24:03,685 [ 1] INFO  Unity: Client UserService Init
-2022-07-06 01:24:09,533 [ 1] INFO  Unity: UserLoginRequest::user:123 psw:456
-2022-07-06 01:24:09,535 [ 1] INFO  Unity: ConnectToServer() Start
-2022-07-06 01:24:09,536 [ 1] INFO  Unity: DoConnect
-2022-07-06 01:24:09,539 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-07-06 01:24:09,541 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-07-10 14:11:04,617 [ 1] INFO  Unity: LoadingManager start
+2022-07-10 14:11:08,779 [ 1] INFO  Unity: DataManager > DataManager()
+2022-07-10 14:11:08,926 [ 1] INFO  Unity: Client UserService Init
+2022-07-10 14:11:08,928 [ 1] INFO  Unity: Client UserService Init
+2022-07-10 14:11:19,301 [ 1] INFO  Unity: UserRegisterRequest::user:456 psw:789
+2022-07-10 14:11:19,302 [ 1] INFO  Unity: ConnectToServer() Start
+2022-07-10 14:11:19,304 [ 1] INFO  Unity: DoConnect
+2022-07-10 14:11:19,305 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-07-10 14:11:19,308 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-07-06 01:24:13,062 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-07-06 01:24:13,064 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-07-06 01:24:13,296 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-07-06 01:24:13,312 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-07-06 01:24:13,313 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
-2022-07-06 01:24:13,318 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-07-06 01:24:13,319 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-07-10 14:11:22,147 [ 1] INFO  Unity: OnUserRegister:Success[注册成功]
+2022-07-10 14:11:34,834 [ 1] INFO  Unity: UserLoginRequest::user:456 psw:789
+2022-07-10 14:11:34,893 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-07-10 14:11:34,895 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-07-10 14:11:35,225 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-10 14:11:35,238 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index, System.Collections.Generic.List`1[SkillBridge.Message.NCharacterInfo].get_Item (Int32 index) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:633)
+UICharacterSelect.OnSelectCharacter (Int32 idx) (at Assets/Scripts/UI/UICharacterSelect.cs:136)
+UICharacterSelect.Start () (at Assets/Scripts/UI/UICharacterSelect.cs:41)
+}</args></log4net.Error>
+2022-07-10 14:11:35,242 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
+2022-07-10 14:11:35,244 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-10 14:11:35,245 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-07-06 01:24:31,621 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2022-07-06 01:24:31,648 [ 1] INFO  Unity: OnGameEnter:Success,[None]
-2022-07-06 01:24:31,660 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
-2022-07-06 01:24:31,663 [ 1] INFO  Unity: AddCharacter:8:箭 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-07-06 01:24:31,666 [ 1] INFO  Unity: 增加实体：entity.Id：1
-2022-07-06 01:24:31,667 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-07-06 01:24:32,340 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-07-06 01:24:32,347 [ 1] INFO  Unity: UIMInimap Init
-2022-07-06 01:24:32,348 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
-2022-07-06 01:24:39,430 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-07-06 01:24:39,433 [ 1] INFO  Unity: UserGameLeaveRequest
-2022-07-06 01:24:39,484 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:8,CurrentCharacter:8
-2022-07-06 01:24:39,486 [ 1] INFO  Unity: 自己离开：response.characterId：8，User.Instance.CurrentCharacter.Entity.Id：8
-2022-07-06 01:24:39,491 [ 1] INFO  Unity: RemoveCharacter:8
-2022-07-06 01:24:39,495 [ 1] INFO  Unity: 移除实体：entity.Id：1
-2022-07-06 01:24:39,506 [ 1] INFO  Unity: OnGameLeave:Success [None]
-2022-07-06 01:24:39,510 [ 1] INFO  Unity: Character_8_箭 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2022-07-06 01:24:39,714 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-07-06 01:24:39,727 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-07-06 01:24:39,728 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
-2022-07-06 01:24:39,730 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-07-06 01:24:39,731 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-07-10 14:11:56,021 [ 1] INFO  Unity: charName:涉水涉 CharacterClass [Warrior]
+2022-07-10 14:11:56,114 [ 1] INFO  Unity: OnUserCreateCharacter:Success [None]
+2022-07-10 14:11:56,116 [ 1] INFO  Unity: 当前数目1response:1
+2022-07-10 14:11:56,915 [ 1] INFO  Unity: Select Char:[0]涉水涉[Warrior]
+2022-07-10 14:11:57,905 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2022-07-10 14:11:58,079 [ 1] INFO  Unity: OnGameEnter:Success,[None]
+2022-07-10 14:11:58,086 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
+2022-07-10 14:11:58,089 [ 1] INFO  Unity: AddCharacter:3:涉水涉 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-07-10 14:11:58,091 [ 1] INFO  Unity: 增加实体：entity.Id：1
+2022-07-10 14:11:58,093 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-07-10 14:11:58,984 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-07-10 14:11:58,994 [ 1] INFO  Unity: UIMInimap Init
+2022-07-10 14:11:58,995 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
+2022-07-10 14:12:01,326 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-07-10 14:12:01,327 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-07-06 01:24:43,992 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2022-07-06 01:24:44,007 [ 1] INFO  Unity: OnGameEnter:Success,[None]
-2022-07-06 01:24:44,008 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1,Count:1,CurrentMapId:0
-2022-07-06 01:24:44,010 [ 1] INFO  Unity: AddCharacter:8:箭 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-07-06 01:24:44,012 [ 1] INFO  Unity: 增加实体：entity.Id：2
-2022-07-06 01:24:44,015 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-07-06 01:24:44,778 [ 1] INFO  Unity: SetPosition:(5000, 4000, 768)
-2022-07-06 01:24:44,781 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:2 POS:(5000,4000,768) DIR:(100,0,0) SPD:0
-2022-07-06 01:24:44,908 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-07-06 01:24:44,909 [ 1] INFO  Unity: MonoSingleton:MainPlayerCamera (MainPlayerCamera)
-2022-07-06 01:24:44,910 [ 1] INFO  Unity: MonoSingleton:UIWorldElementManager (UIWorldElementManager)
-2022-07-06 01:24:44,910 [ 1] INFO  Unity: MonoSingleton:GameObjectManager (GameObjectManager)
-2022-07-06 01:24:44,912 [ 1] INFO  Unity: UIMInimap Init
-2022-07-06 01:24:44,912 [ 1] INFO  Unity: Minimap:buluzhengother:MainCity
-2022-07-06 01:25:02,340 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-07-06 01:25:02,344 [ 1] INFO  Unity: UserGameLeaveRequest
-2022-07-06 01:25:02,358 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:8,CurrentCharacter:8
-2022-07-06 01:25:02,360 [ 1] INFO  Unity: 自己离开：response.characterId：8，User.Instance.CurrentCharacter.Entity.Id：8
-2022-07-06 01:25:02,361 [ 1] INFO  Unity: RemoveCharacter:8
-2022-07-06 01:25:02,362 [ 1] INFO  Unity: 移除实体：entity.Id：2
-2022-07-06 01:25:02,363 [ 1] INFO  Unity: OnGameLeave:Success [None]
-2022-07-06 01:25:02,364 [ 1] INFO  Unity: Character_8_箭 OnDestroy :ID:2 POS:(5000, 4000, 768) DIR:(100, 0, 0) SPD:0 
-2022-07-06 01:25:02,525 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-07-06 01:25:02,535 [ 1] INFO  Unity: Select Char:[8]箭[Archer]
-2022-07-06 01:25:02,536 [ 1] INFO  Unity: MonoSingleton:GameObject (Network.NetClient)
-2022-07-06 01:25:02,538 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-07-06 01:25:02,538 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
-2022-07-06 01:25:04,172 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-07-06 01:25:04,172 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
+2022-07-10 14:12:01,329 [ 1] INFO  Unity: Character_3_涉水涉 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

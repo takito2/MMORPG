@@ -108,7 +108,7 @@ public class PlayerInputController : MonoBehaviour {
     }
     Vector3 lastPos;
     float lastSync = 0;
-    private void LateUpdate()
+    private void LateUpdate()//强制位置同步
     {
         Vector3 offset = this.rb.transform.position - lastPos;
         this.speed = (int)(offset.magnitude * 100f / Time.deltaTime);
