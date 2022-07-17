@@ -16,6 +16,7 @@ namespace GameServer.Entities
         public TCharacter Data;
 
         public ItemManager ItemManager;
+        public StatusManager StatusManager;
         
 
         public Character(CharacterType type,TCharacter cha):
@@ -30,15 +31,32 @@ namespace GameServer.Entities
             this.Info.Tid = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
+            this.Info.Gold = cha.Gold;
             this.Info.Entity = this.EntityData;
             this.Define = DataManager.Instance.Characters[this.Info.Tid];
 
             this.ItemManager = new ItemManager(this);//初始化，绑定Owner,为ItemManager内Items填入值：Data.Items=》ItemManager.Items
             this.ItemManager.GetItemInfos(this.Info.Items);//为Items填入值，供网络使用：ItemManager.Items=》Info.Items
              
-            this.Info.Bag = new NBagInfo();
+            this.Info.Bag = new NBagInfo();//背包初始化
             this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
             this.Info.Bag.Items = this.Data.Bag.Items;
+            this.Info.Equips = this.Data.Equips;
+            this.StatusManager = new StatusManager(this);
         }
+
+        public long Gold
+        {
+            get { return this.Data.Gold; }
+            set
+            {
+                if (this.Data.Gold == value)
+                    return;
+                //将Statusmanager方法封装进Gold属性内，对外直接改变Gold值即可增加改变状态
+                this.StatusManager.AddGoldChange((int)(value - this.Data.Gold));
+                this.Data.Gold = value;
+            }
+        }
+
     }
 }

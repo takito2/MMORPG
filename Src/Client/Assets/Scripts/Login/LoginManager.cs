@@ -39,6 +39,7 @@ public class LoginManager : MonoBehaviour {
         //Init basic services
         MapService.Instance.Init();
         UserService.Instance.Init();
+        ShopManager.Instance.Init();
         
 
         for( float i = 50;i < 100;)

@@ -108,27 +108,43 @@ namespace GameServer.Services
         private void OnCreateCharacter(NetConnection<NetSession> sender, UserCreateCharacterRequest request)
         {
             Log.InfoFormat("CreateCharacter:Name:{0} Class:{1}", request.Name, request.Class);
-         
-                TCharacter character = new TCharacter()
-                {
-                    Name = request.Name,
-                    Class = (int)request.Class,
-                    TID = (int)request.Class,
-                    MapID = 1,
-                    MapPosX = 5000,
-                    MapPosY = 4000,
-                    MapPosZ = 820,
+
+            TCharacter character = new TCharacter()
+            {
+                Name = request.Name,
+                Class = (int)request.Class,
+                TID = (int)request.Class,
+                MapID = 1,
+                MapPosX = 5000,
+                MapPosY = 4000,
+                MapPosZ = 820,
+                Gold = 100000,//初始金币数
+                Equips = new byte[28],
                 };
 
             //背包初始化
             var bag = new TCharacterBag();
             bag.Owner = character;
             bag.Items = new byte[0];
-            bag.Unlocked = 20;
+            bag.Unlocked = 30;
             TCharacterItem it = new TCharacterItem();
             character.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
 
             character = DBService.Instance.Entities.Characters.Add(character);
+
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemID = 1,
+                ItemCount = 20,
+            });
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemID = 2,
+                ItemCount = 20,
+            });
+
             sender.Session.User.Player.Characters.Add(character);
             DBService.Instance.Entities.SaveChanges();
 
@@ -169,25 +185,6 @@ namespace GameServer.Services
 
             //返回初始角色信息
             message.Response.gameEnter.Character = character.Info;//网络数据，返回包括道具信息Items
-
-            //道具系统测试用例
-            int itemId = 2;
-            bool hasItem = character.ItemManager.HasItem(itemId);
-            Log.InfoFormat("HasItem:[{0}],{1}",itemId,hasItem);
-            if (hasItem)
-            {
-                //character.ItemManager.RemoveItem(itemId, 1);
-            }
-            else
-            {
-                character.ItemManager.AddItem(1, 50);
-                character.ItemManager.AddItem(2, 38);
-                character.ItemManager.AddItem(3, 200);
-                character.ItemManager.AddItem(4, 300);
-            }
-            Models.Item item = character.ItemManager.GetItem(itemId);
-            Log.InfoFormat("Item:[{0}][{1}]",itemId,item);
-            DBService.Instance.Save();
 
 
             byte[] data = PackageHandler.PackMessage(message);

@@ -17,8 +17,6 @@ public class Login : MonoBehaviour {
 
         //另一种做法，直接new对象
         msg.Request = new SkillBridge.Message.NetMessageRequest();//实例化，不然会报空引用
-        msg.Request.firstRequest = new SkillBridge.Message.FirstTestRequest();
-        msg.Request.firstRequest.Helloworld = "Hello World";
 
         Network.NetClient.Instance.SendMessage(msg);//只能发送NetMessage类型消息
 

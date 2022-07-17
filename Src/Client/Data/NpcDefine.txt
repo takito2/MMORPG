@@ -11,7 +11,7 @@
     "Description": "杂货商人",
     "Type": "Functional",
     "Function": "InvokeShop",
-    "Param": 1
+    "Param": 2
   },
   "3": {
     "ID": 3,
@@ -26,6 +26,6 @@
     "Description": "装备NPC",
     "Type": "Functional",
     "Function": "InvokeShop",
-    "Param": 2
+    "Param": 1
   }
 }

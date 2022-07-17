@@ -252,6 +252,7 @@ namespace Services
                 {
                     ItemManager.Instance.Init(response.Character.Items);
                     BagManager.Instance.Init(response.Character.Bag);
+                    EquipManager.Instance.Init(response.Character.Equips);
                 }
             }
         }
