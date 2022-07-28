@@ -46,7 +46,7 @@ namespace Network
             {
                 if (this.Character != null && this.Character.StatusManager.HasStatus)
                 {
-                    this.Character.StatusManager.ApplyResponse(Response);
+                    this.Character.StatusManager.PostProcess(Response);
                 }
 
                 byte[] data = PackageHandler.PackMessage(response);
@@ -61,7 +61,7 @@ namespace Network
         //    if (response != null)
         //    {
         //        if (PostResponser != null)
-        //            this.PostResponser.PostProcess(Response);
+        //            this.Character.StatusManager.PostProcess(Response);
 
         //        byte[] data = PackageHandler.PackMessage(response);
         //        response = null;

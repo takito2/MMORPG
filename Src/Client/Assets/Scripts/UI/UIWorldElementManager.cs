@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,10 @@ using UnityEngine;
 public class UIWorldElementManager : MonoSingleton<UIWorldElementManager> {
 
     public GameObject nameBarPrefab;
+    public GameObject npcStatusPrefab;
 
-    private Dictionary<Transform, GameObject> elements = new Dictionary<Transform, GameObject>();
+    private Dictionary<Transform, GameObject> elementsNames = new Dictionary<Transform, GameObject>();
+    private Dictionary<Transform, GameObject> elementsStatus = new Dictionary<Transform, GameObject>();
 
     public Camera Camera;
 
@@ -30,16 +33,43 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager> {
         goNameBar.name = "NameBar" + character.entityId;
         goNameBar.GetComponent<UIWorldElement>().owner = owner;
         goNameBar.GetComponent<UINameBar>().character = character;
-        this.elements[owner] = goNameBar;
+        this.elementsNames[owner] = goNameBar;
         goNameBar.SetActive(true);
     }
 
     public void RemoveCharacterNameBar(Transform owner)
     {
-        if (this.elements.ContainsKey(owner))
+        if (this.elementsNames.ContainsKey(owner))
         {
-            Destroy(this.elements[owner]);//从游戏中删除
-            this.elements.Remove(owner);//从字典移除
+            Destroy(this.elementsNames[owner]);//从游戏中删除
+            this.elementsNames.Remove(owner);//从字典移除
+        }
+    }
+
+    public void AddNpcQuestStatus(Transform owner, NpcQuestStatus status)
+    {
+        if(this.elementsStatus.ContainsKey(owner))
+        {
+            elementsStatus[owner].GetComponent<UIQuestStatus>().SetQuestStatus(status);
+        }
+        else
+        {
+            GameObject go = Instantiate(npcStatusPrefab, this.transform);
+            go.name = "NpcQuestStatus" + owner.name;
+            go.GetComponent<UIWorldElement>().owner = owner;
+            go.GetComponent<UIQuestStatus>().SetQuestStatus(status);
+            this.elementsStatus[owner] = go;
+            go.SetActive(true);
+        }
+        
+    }
+
+    public void RemoveNpcQuestStatus(Transform owner)
+    {
+        if (this.elementsStatus.ContainsKey(owner))
+        {
+            Destroy(this.elementsStatus[owner]);//从游戏中删除
+            this.elementsStatus.Remove(owner);//从字典移除
         }
     }
 }
