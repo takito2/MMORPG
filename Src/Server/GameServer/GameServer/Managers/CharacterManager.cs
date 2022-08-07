@@ -36,7 +36,7 @@ namespace GameServer.Managers
             Log.InfoFormat("AddCharacter:cha:{0}",cha.ID);
             Character character = new Character(CharacterType.Player, cha);//将DB对象转变为实体对象，Tcharacter ——》character
             EntityManager.Instance.AddEntity(cha.MapID, character);
-            //character.Info.Id = character.Id;//将entityid同步到网络层
+            character.Info.EntityId = character.entityId;//将entityid同步到网络层
             this.Characters[cha.ID] = character;
             return character;
         }
@@ -44,9 +44,19 @@ namespace GameServer.Managers
 
         public void RemoveCharacter(int characterId)
         {
-            var cha = this.Characters[characterId];
+            Character cha;
+            this.Characters.TryGetValue(characterId,out cha);
+            if (cha == null)
+                return;
             EntityManager.Instance.RemoveEntity(cha.Data.MapID, cha);
             this.Characters.Remove(characterId);
+        }
+
+        public Character GetCharacter(int characterId)
+        {
+            Character character = null;
+            this.Characters.TryGetValue(characterId, out character);
+            return character;
         }
     }
 }

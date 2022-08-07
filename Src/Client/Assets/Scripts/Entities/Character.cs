@@ -49,7 +49,7 @@ namespace Entities
         public Character(NCharacterInfo info) : base(info.Entity)
         {
             this.Info = info;
-            this.Define = DataManager.Instance.Characters[info.Tid];
+            this.Define = DataManager.Instance.Characters[info.ConfigId];
         }
 
         public void MoveForward()

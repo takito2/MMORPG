@@ -49,7 +49,7 @@ namespace Managers
         {
             Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
             Character character = new Character(cha);
-            this.Characters[cha.Id] = character;
+            this.Characters[cha.EntityId] = character;//数据库Id为Key
             EntityManager.Instance.AddEntity(character);
             if (OnCharacterEnter!=null)
             {
@@ -58,7 +58,7 @@ namespace Managers
         }
 
 
-        public void RemoveCharacter(int characterId)
+        public void RemoveCharacter(int characterId)//参数为entityId，Key为数据库Id，不匹配
         {
             Debug.LogFormat("RemoveCharacter:{0}", characterId);
             if (this.Characters.ContainsKey(characterId))

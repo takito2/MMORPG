@@ -40,28 +40,14 @@ namespace Network
             }
         }
 
-        public byte[] GetResponse()
-        {
-            if (response != null)
-            {
-                if (this.Character != null && this.Character.StatusManager.HasStatus)
-                {
-                    this.Character.StatusManager.PostProcess(Response);
-                }
-
-                byte[] data = PackageHandler.PackMessage(response);
-                response = null;
-                return data;
-            }
-            return null;
-        }
-
         //public byte[] GetResponse()
         //{
         //    if (response != null)
         //    {
-        //        if (PostResponser != null)
+        //        if (this.Character != null && this.Character.StatusManager.HasStatus)
+        //        {
         //            this.Character.StatusManager.PostProcess(Response);
+        //        }
 
         //        byte[] data = PackageHandler.PackMessage(response);
         //        response = null;
@@ -69,5 +55,19 @@ namespace Network
         //    }
         //    return null;
         //}
+
+        public byte[] GetResponse()
+        {
+            if (response != null)
+            {
+                if (PostResponser != null)
+                    this.PostResponser.PostProcess(Response);
+
+                byte[] data = PackageHandler.PackMessage(response);
+                response = null;
+                return data;
+            }
+            return null;
+        }
     }
 }

@@ -62,15 +62,15 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnMapCharacterLeave: CharID:{0},CurrentCharacter:{1}", response.characterId, User.Instance.CurrentCharacter.Id);
-            if (response.characterId != User.Instance.CurrentCharacter.Id)//因为CurrentCharacter内无存储entityid字段，故暂时使用数据库ID判断
+            Debug.LogFormat("OnMapCharacterLeave: CharID:{0},CurrentCharacter:{1}", response.entityId, User.Instance.CurrentCharacter.Id);
+            if (response.entityId != User.Instance.CurrentCharacter.EntityId)//协议新加入entityid，故改用
             {
-                Debug.LogFormat("别人离开：response.characterId：{0}，User.Instance.CurrentCharacter.Entity.Id：{1}", response.characterId, User.Instance.CurrentCharacter.Id);
-                CharacterManager.Instance.RemoveCharacter(response.characterId);
+                Debug.LogFormat("别人离开：response.characterId：{0}，User.Instance.CurrentCharacter.Entity.Id：{1}", response.entityId, User.Instance.CurrentCharacter.Id);
+                CharacterManager.Instance.RemoveCharacter(response.entityId);
             }               
             else
             {
-                Debug.LogFormat("自己离开：response.characterId：{0}，User.Instance.CurrentCharacter.Entity.Id：{1}", response.characterId, User.Instance.CurrentCharacter.Id);
+                Debug.LogFormat("自己离开：response.characterId：{0}，User.Instance.CurrentCharacter.Entity.Id：{1}", response.entityId, User.Instance.CurrentCharacter.Id);
                 CharacterManager.Instance.Clear();
             }
                 

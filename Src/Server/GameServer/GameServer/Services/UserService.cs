@@ -93,7 +93,7 @@ namespace GameServer.Services
                     info.Name = c.Name;
                     info.Type = CharacterType.Player;
                     info.Class = (CharacterClass)c.Class;
-                    info.Tid = c.ID;//数据库内唯一Id
+                    info.ConfigId = c.ID;//数据库内唯一Id
                     message.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
 
@@ -114,6 +114,7 @@ namespace GameServer.Services
                 Name = request.Name,
                 Class = (int)request.Class,
                 TID = (int)request.Class,
+                Level = 1,
                 MapID = 1,
                 MapPosX = 5000,
                 MapPosY = 4000,
@@ -157,11 +158,11 @@ namespace GameServer.Services
             foreach (var c in sender.Session.User.Player.Characters)
             {
                 NCharacterInfo info = new NCharacterInfo();
-                info.Id = 0;//本应为entityId，因entity暂未创建，先置0
+                info.Id = c.ID;//本应为entityId，因entity暂未创建
                 info.Name = c.Name;
                 info.Type = CharacterType.Player;
                 info.Class = (CharacterClass)c.Class;
-                info.Tid = c.ID;//数据库内唯一Id
+                info.ConfigId = c.TID;//职业ID
                 message.Response.createChar.Characters.Add(info);
             }
 
@@ -176,6 +177,7 @@ namespace GameServer.Services
             TCharacter dbchar = sender.Session.User.Player.Characters.ElementAt(requset.characterIdx);//锁定目前选中的DB角色
             Log.InfoFormat("UserGameEnterRequest：characterIdx:{0}", requset.characterIdx);
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
+            SessionManager.Instance.AddSession(character.Id, sender);//添加在线状态
 
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
@@ -190,6 +192,7 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
             sender.Session.Character = character;
+            sender.Session.PostResponser = character;//初始化后处理器
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
         }
 
@@ -197,7 +200,8 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             Log.InfoFormat("UserGameLeaveRequest: characterID:{0}:{1} map:{2}", character.Info.Id, character.Info.Name, character.Info.mapId);
-            CharacterLeave(character);
+            SessionManager.Instance.RemoveSession(character.Id);//离线
+            this.CharacterLeave(character);
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.gameLeave = new UserGameLeaveResponse();
@@ -212,6 +216,7 @@ namespace GameServer.Services
         {
             CharacterManager.Instance.RemoveCharacter(character.Info.Id);
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            character.Clear();
         }
 
 
